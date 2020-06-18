@@ -184,7 +184,7 @@ class Reservation(models.Model):
         return Passenger.objects.filter(reservation_id=self)
 
     def get_absolute_url(self):
-        return f"/ota/reservation_details/{str(self.pk)}"
+        return f"reservation_details/{str(self.pk)}"
 
 
     def get_ond(self):

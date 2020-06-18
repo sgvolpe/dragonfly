@@ -11,7 +11,7 @@
 
             <!--h4><small><img src="https://daisycon.io/images/airline/?width=150&height=75&color=ffffff&iata={{itinerary.main_carrier}}" alt="{{itinerary.main_carrier}}"></small></h4-->
 
-            {% if checkout == 'No' %}{% else %}<a href="{% url 'checkout' pk=itinerary.id %}"><button type="button" class="btn btn-warning" >Select</button></a>{% endif %}
+            {% if checkout == 'no' %}{% else %}<a href="{% url 'checkout' pk=itinerary.id %}"><button type="button" class="btn btn-warning" >Select</button></a>{% endif %}
 
         </div>
         <div style="width: 2px;  background-color:#e2e2e2"></div>

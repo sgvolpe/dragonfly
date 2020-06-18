@@ -11,20 +11,20 @@
             Sorry! {{ERROR}}
         {% else %}
         <div class="row">
-            <code>{{itinerary.id}}</code>
-        <div class="col-6">
-            {% include 'passenger_form.html' with itinerary_id=itinerary.id passengers=passengers %}
-        </div>
-        <div class="col-6">
-            <div class="row">
-                <div class="col" >
-                    {% include 'itinerary_tag.html' with itin_id=itin_id itinerary=itinerary%}
+            <code hidden>{{itinerary.id}}</code>
+            <div class="col-6">
+                {% include 'dragonfly/passenger_form.html' with itinerary_id=itinerary.id passengers=passengers %}
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col" >
+                        {% include 'dragonfly/itinerary_tag.html' with itin_id=itin_id itinerary=itinerary checkout='no'%}
+                        <div class="sgv_divider"></div>
+                    </div>
                     <div class="sgv_divider"></div>
                 </div>
-                <div class="sgv_divider"></div>
             </div>
-        </div>
-        <div class="col-2"></div>
+            <div class="col-2"></div>
     </div>
 
     {% endif %}
