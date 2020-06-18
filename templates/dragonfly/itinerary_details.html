@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+
+{% load extra_tags %}
+    <title>Itinerary Details</title>
+{% endblock %}
+
+{% block content %}
+    {% include 'itinerary_tag.html' with itinerary=itinerary itin_id=itin_id %}
+{% endblock %}

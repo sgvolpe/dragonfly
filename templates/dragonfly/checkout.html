@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title>Checkout {{ori}} - {{des}}</title>
+{% endblock %}
+{% block content %}
+{% load extra_tags %}
+
+<div class="container-fluid">
+        {% if ERROR %}
+            Sorry! {{ERROR}}
+        {% else %}
+        <div class="row">
+            <code>{{itinerary.id}}</code>
+        <div class="col-6">
+            {% include 'passenger_form.html' with itinerary_id=itinerary.id passengers=passengers %}
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col" >
+                    {% include 'itinerary_tag.html' with itin_id=itin_id itinerary=itinerary%}
+                    <div class="sgv_divider"></div>
+                </div>
+                <div class="sgv_divider"></div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    {% endif %}
+
+
+
+    <div class="row">
+        We are a Travel Agency
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+
+
+
+    console.log('End') ;
+
+</script>
+{% endblock %}

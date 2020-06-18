@@ -1,0 +1,81 @@
+{% extends 'dragonfly/base.html' %}
+{% load static %}
+{% block title %}
+    <title>Shop Results {{ori}} - {{des}}</title>
+{% endblock %}
+{% block content %}
+{% load extra_tags %}
+
+<div class="container-fluid">
+
+    {% if ERROR %}
+        Sorry! {{ERROR}}
+    {% else %}
+    <div class="row banner">
+        <div class="col card">Need Help?
+        +447887945</div>
+    </div>
+    <div class="row" class="sgv_divider"></div>
+    <div class="row">
+
+        <div class="col-2" style="margin:10px">
+            {% include 'dragonfly/results_side_bar.html' with results=results airlines_counter=airlines_counter search_id=search_id offset=offset limit=limit results=results total_options_number=total_options_number stats=stats %}
+        </div>
+
+        <div class="col-8">
+            <!--div class="row">
+                <div class="col" >
+                {% for tag, itinerary in selected_itins.items %}
+                    {% include 'ota/itinerary_tag.html' with itin_id=tag itinerary=itinerary tag=tag%}
+                    <div class="sgv_divider"></div>
+                {% endfor %}
+                </div>
+                <div class="sgv_divider"></div>
+            </div-->
+
+            <div class="row">
+                <div class="col" >
+                {% for itin_id, itinerary in results.items %}
+                    {% include 'dragonfly/itinerary_tag.html' with itin_id=itin_id itinerary=itinerary %}
+                    <div class="sgv_divider"></div>
+                {% endfor %}
+                </div>
+                <div class="sgv_divider"></div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    {% endif %}
+
+
+
+    <div class="row">
+        We are a Travel Agency
+    </div>
+
+</div>
+
+
+
+<script>
+
+    $('.itinerary_show').click(function() {
+        el = $(this).parent().parent().find('.full_itinerary_div');
+        if (el.is(":hidden")){
+            el.show()
+        }else{
+            el.hide()
+        }
+    });
+
+</script>
+<script>
+
+
+
+
+    console.log('End') ;
+
+</script>
+{% endblock %}

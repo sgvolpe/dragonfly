@@ -1,0 +1,17 @@
+# # # LOG START # # #Finished 'get_token' in 1.121957899999984 secs|
+Finished 'get_token' in 1.1193559000000732 secs|
+Finished 'get_token' in 1.08999510000001 secs|
+Finished 'get_token' in 1.1050844 secs|
+Finished 'parse_response' in 0.008117200000000935 secs|
+Finished 'get_token' in 1.0940999000000002 secs|
+Finished 'parse_response' in 0.007725000000000648 secs|
+Finished 'get_token' in 1.111074 secs|
+Finished 'parse_response' in 0.007598800000000239 secs|
+Finished 'get_token' in 0.6752382000000026 secs|
+Finished 'parse_response' in 0.007668200000001235 secs|
+Finished 'get_token' in 1.1154027000000002 secs|
+Finished 'get_token' in 0.6841077000000002 secs|
+Finished 'parse_response' in 0.007182300000000197 secs|
+Finished 'send_bfm' in 5.167207100000001 secs|
+Finished 'parse_response' in 0.0063563000000002035 secs|
+Finished 'send_bfm' in 4.7329796 secs|

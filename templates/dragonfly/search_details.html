@@ -1,0 +1,31 @@
+{% extends 'dragonfly/base.html' %}
+{% load static %}
+{% load extra_tags %}
+
+{% block title %}
+<title>Search Details</title>
+{% endblock %}
+{% block content %}
+    {% if ERROR %}
+         <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">{{ERROR}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+    {% else %}
+    <div class="row">
+        <div class="col">{{object.origins}}</div>
+        <div class="col">{{object.destinations}}</div>
+        <div class="col">{{object.dates}}</div>
+        <div class="col">{{object.created}}</div>
+        <div class="col">{{object.updated}}</div>
+        <div class="col">{{object.hits}}</div>
+    </div>
+
+
+    {% endif %}
+{% endblock %}

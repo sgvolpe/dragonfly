@@ -1,0 +1,59 @@
+{% extends 'dragonfly/base.html' %}
+{% load static %}
+{% block title %}
+    <title>Dragonfly Travel</title>
+{% endblock %}
+{% block content %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <div class="container" >
+        <div class="row" id="header" >
+            {% include 'dragonfly/search_box.html' %}
+        </div>
+        <div class="row sgv_divider"></div>
+        <div class="row sgv_divider"></div>
+        <div class="row">
+            {% include 'dragonfly/carrousel.html' %}
+        </div>
+        <div class="row sgv_divider"></div>
+        <div class="container">
+        <div class="row">
+            <div class="col card sgv_panel">
+                <h4>Promotions</h4>
+                {% for promo in promotions %}
+                    <div class="row">
+                        <a href="{% url 'dragonfly:see_itinerary' pk=promo.pk %}">{{promo.itinerary_origin}}{{promo.itinerary_destination}} from {{promo.currency}}{{promo.total_price}}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col card sgv_panel">
+                <div class="row">
+                    <h4>Most Popular</h4>
+                </div>
+                {% for search in most_popular %}
+                     <div class="row">
+                        {{search.origins}} - {{search.destinations}}
+                    </div>
+                {% endfor%}
+            </div>
+            <div class="col card sgv_panel">
+                <h4>Trending</h4>
+                {% for search in trending_7days %}
+                     <div class="row">
+                        {{search.origins}} - {{search.destinations}}
+                    </div>
+                {% endfor%}
+            </div>
+
+        </div></div>
+        <div class="row" style="">
+        <div class="col" style="">
+        {% include 'dragonfly/_footer.html'%}
+        </div>
+        </div>
+    </div>
+
+{% endblock %}

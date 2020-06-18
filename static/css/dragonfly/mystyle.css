@@ -1,0 +1,181 @@
+:root {
+  --font_color: #565a5c;
+  --font2_color: white;
+  --primary_color: rebeccapurple;
+  --panel_color: white;
+}
+
+body{
+    color: var(--primary_color);
+    background: #f7f7f9;
+    //background-image: url('../static/images/1.jpg');
+    font-family: 'Open Sans',sans-serif;
+
+}
+
+navbar{
+    background: red;
+    position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  overflow-x: hidden;
+}
+
+.search-box input {
+    border-radius: 0;
+    padding: 5px;
+}
+
+.search-box{
+    background: var(--primary_color);
+    color: var(--font2_color);
+    font-size: 1.5rem;
+    opacity: 0.95;
+
+    //background-image: url('../../images/ota/3.jpg');
+
+}
+
+#header{
+    background-image: url('../../images/ota/3.jpg');
+}
+
+
+.parallax {
+    background-image: url("https://picsum.photos/id/42/3456/2304");
+    height: 250px;
+    width: 100% ;
+    text-align: center;
+    color:white;
+    font-family: monospace ;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.sgv_divider {
+    width: 65px;
+    height: 2px;
+    //background: #333;
+    margin: 20px auto;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.itinerary_container{
+    color: var(--primary_color);
+    background-color:white;
+    color: var(--font_color);
+    width=80%
+    margin: 20px auto;
+    box-shadow: 0 8px 6px -6px black;
+
+}
+
+
+.itinerary_container h5{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #565a5c ;
+}
+
+.itinerary_container h5{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+
+.sidenav {
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  left: 10px;
+  background: var(--primary_color);
+  color: var(--font2_color);
+  overflow-x: hidden;
+  //padding: 8px 0;
+  align-items: center;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.sidenav a {
+    color: var(--font2_color);
+}
+.sidenav a:hover {
+  color: var(--font2_color);
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.airline_icon{
+    width: auto;
+    height: auto;
+    min-width: inherit;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 1;
+    margin: 0 5px 8px;
+    border-radius: f;
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,.1);
+        margin: 0 5px 8px;
+}
+.itinerary_row{
+    padding: 15px ;
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+footer{
+    background: var(--primary_color);
+    color: var(--font2_color);
+    min-height: 500px;
+    margin-top: 100px;
+}
+
+footer a{
+
+    color: var(--font2_color);
+
+}
+
+.sgv_panel{
+    margin: 15px;
+    align-items: center;
+}
+
+radnom{
+font-size: 12px;
+    padding: 5px 0 0 !important;
+    word-wrap: break-word;
+    line-height: 13px;
+}
+
+
+
+.banner{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    transition: .4s;
+    color: var(--font2_color);
+    background: var(--primary_color);
+    margin: 10px;
+    padding: 5px
+}

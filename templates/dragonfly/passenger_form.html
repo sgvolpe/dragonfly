@@ -1,0 +1,98 @@
+
+
+  <div class="container-fluid itinerary_container">
+      <div class="row">
+          <div class="col"><h4>Passenger Data</h4></div>
+      </div>
+      <div class="sgv_divider"></div>
+      <div class="row">
+          <div class="col">
+          <form action="{% url 'create_reservation' %}" method="post">
+              {% csrf_token %}
+
+                {% for id, passenger in passengers.items %}
+              <h5>Passenger {{id}}</h5>
+                 <div class="form-group">
+                     <label for="name{{id}}">Passenger Name</label>
+                     <input type="text"  name="name{{id}}" class="form-control name" id="name{{id}}" aria-describedby="name{{id}}Help"
+                            placeholder="Enter Passenger Name" value="{{passenger.name}}">
+                     <small id="name{{id}}Help" class="form-text text-muted"></small>
+                 </div>
+              <div class="form-group">
+                     <label for="name{{id}}">Passenger Last Name</label>
+                     <input type="text"  name="surname{{id}}" class="form-control surname" id="surname{{id}}" aria-describedby="surname{{id}}Help"
+                            placeholder="Enter Passenger Surname" value="{{passenger.surname}}">
+                     <small id="surname{{id}}Help" class="form-text text-muted"></small>
+                 </div>
+                 <div class="form-group">
+                     <label for="phone{{id}}">Phone Number</label>
+                     <input type="text" name="phone{{id}}" class="form-control phone" id="phone{{id}}" aria-describedby="phone{{id}}Help" placeholder="Enter Passenger Phone Number" value="{{passenger.phone}}">
+                     <small id="phone{{id}}Help" class="form-text text-muted"></small>
+                 </div>
+              {% endfor %}
+              {% if checkout == 'No' %}
+                  <script> $(document).ready(function(){
+                    $('#submit_btn').hide() ;
+                        }
+                    )
+                  </script>
+              {% else %}
+                 <hr>
+
+                  <div class="form-group">
+                      <h4>Payment Information</h4>
+                     <label for="credit_card">Credit Card Number</label>
+                     <input type="text" class="form-control" id="credit_card" aria-describedby="credit_cardHelp" placeholder="Enter Credit Card Number">
+                     <small id="credit_cardHelp" class="form-text text-muted"></small>
+                 </div>
+              {% endif %}
+              <input type="text" value="{{itinerary_id}}" name="itinerary_id" id="itinerary_id" hidden>
+              <button type="submit" class="btn btn-primary" id="submit_btn">Submit</button>
+              <input type="text" value="" name="names" id="names" hidden>
+              <input type="text" value="" name="surnames" id="surnames" hidden>
+              <input type="text" value="" name="phones" id="phones" hidden>
+
+            </form>
+          </div>
+
+      </div>
+      <div class="sgv_divider"></div>
+      <script>
+
+
+        $(document).ready(
+        function(){
+            $('.name').change(function(){
+                names = '' ;
+                $('.name').each(function(){
+                    names += $(this).val()+ ','
+                }) ;
+                names = names.substring(0, names.length - 1);
+                $('#names').val(names)
+
+            })
+
+            $('.surname').change(function(){
+                surnames = '' ;
+                $('.surname').each(function(){
+                    surnames += $(this).val()+ ','
+                }) ;
+                surnames = surnames.substring(0, surnames.length - 1);
+                $('#surnames').val(surnames)
+            }) ;
+            $('.phone').change(function(){
+                phones = '' ;
+                $('.phone').each(function(){
+                    phones += $(this).val()+ ','
+                }) ;
+                phones = phones.substring(0, phones.length - 1);
+                $('#phones').val(phones)
+            }) ;
+            $('#itinerary_id').val({{itinerary_id}})
+        }) ;
+      </script>
+
+
+  </div>
+
+

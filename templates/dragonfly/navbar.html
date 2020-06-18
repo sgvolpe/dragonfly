@@ -1,0 +1,15 @@
+{% load static %}
+<div class="collapse" id="navbarToggleExternalContent">
+<div class="bg-dark p-4">
+  <h4 class="text-white">Collapsed content</h4>
+  <span class="text-muted">Toggleable via the navbar brand.</span>
+</div>
+</div>
+<nav class="navbar navbar-dark " style="background:rebeccapurple">
+<a class="navbar-brand" href="{% url 'index' %}"><i class="fas asd"><img src="{% static 'images/dragonfly/dragonfly_ico.svg' %}" alt="" style="height:25px;height:25px"> </i> Dragonfly</a>
+<a class="navbar-brand" href="emailto:sgvolpe@gmail.com"><i class="far fa-envelope-open"></i> Contact Us</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+
+  <span class="navbar-toggler-icon"></span>
+</button>
+</nav>
