@@ -89,8 +89,9 @@ def download_airports():
 
 
 def get_airports(text='New', limit=10):
+    print (os.getcwd())
 
-    df = pd.read_csv('Resources/ota/airports_simple.csv') # todo: upper and title
+    df = pd.read_csv('static/resources/ota/airports_simple.csv') # todo: upper and title
 
     df['x'] = '(' + df['iata_code'] + ') ' + df['name'] + ', ' + df['municipality']
     if text != '*':
@@ -99,9 +100,6 @@ def get_airports(text='New', limit=10):
     data = [{'x': row['x'], 'iata': row['iata_code'] } for i, row in df.iterrows()]
     return data
 
-
-i_path = r'C:\Users\sg0216333\OneDrive - Sabre\- PrOjEcTs\river\river\static\images\ota\airline_logos_bu'
-o_path = r'C:\Users\sg0216333\OneDrive - Sabre\- PrOjEcTs\river\river\static\images\ota\airline_logos'
 
 
 def save_cxr(cxr):
