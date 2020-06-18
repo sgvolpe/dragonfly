@@ -1,5 +1,5 @@
 import datetime, functools, os, requests, time
-
+import pandas as pd
 
 
 from datetime import timedelta
@@ -89,19 +89,8 @@ def download_airports():
 
 
 def get_airports(text='New', limit=10):
-    import pandas as pd
+
     df = pd.read_csv('Resources/ota/airports_simple.csv') # todo: upper and title
-
-    df['x'] = '(' + df['iata_code'] + ') ' + df['name'] + ', ' + df['municipality']
-    if text != '*':
-        df = df[df['x'].apply(lambda  x: x.upper()).str.contains(text.upper(), regex=False)]
-    df = df.head(limit)
-    data = [{'x': row['x'], 'iata': row['iata_code'] } for i, row in df.iterrows()]
-    return data
-
-def get_airports(text='New', limit=10):
-
-    df = read('Resources/ota/airports_simple.txt') # todo: upper and title
 
     df['x'] = '(' + df['iata_code'] + ') ' + df['name'] + ', ' + df['municipality']
     if text != '*':
