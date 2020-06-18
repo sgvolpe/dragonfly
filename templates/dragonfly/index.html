@@ -24,9 +24,8 @@
             <div class="col card sgv_panel">
                 <h4>Promotions</h4>
                 {% for promo in promotions %}
-                    <div class="row">
-                        <a href="{% url 'dragonfly:see_itinerary' pk=promo.pk %}">{{promo.itinerary_origin}}{{promo.itinerary_destination}} from {{promo.currency}}{{promo.total_price}}</a>
-                    </div>
+                    {% include 'promotion_bar.html' with promo=promo%}
+
                 {% endfor %}
             </div>
             <div class="col card sgv_panel">
