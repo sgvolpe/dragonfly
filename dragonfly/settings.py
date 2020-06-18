@@ -31,7 +31,7 @@ SECRET_KEY = '%ypyc!6o+gf99(zg5*)b@6y48$vvjyrni^yo)vradhonfo4xje'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sgvolpe1.eu.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['dragonflytravel.eu.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
