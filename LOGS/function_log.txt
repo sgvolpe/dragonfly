@@ -20,3 +20,9 @@ Finished 'get_token' in 1.112546899999984 secs|
 Finished 'get_token' in 0.7043982999999798 secs|
 Finished 'parse_response' in 0.007054299999992963 secs|
 Finished 'send_bfm' in 4.668557299999975 secs|
+Finished 'get_token' in 1.217454399999994 secs|
+Finished 'parse_response' in 0.041090900000000374 secs|
+Finished 'send_bfm' in 5.644545799999996 secs|
+Finished 'get_token' in 1.1155179000000004 secs|
+Finished 'parse_response' in 0.017039400000001592 secs|
+Finished 'send_bfm' in 5.712684299999992 secs|

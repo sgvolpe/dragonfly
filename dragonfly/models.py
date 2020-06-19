@@ -99,8 +99,6 @@ class Itinerary(models.Model):
             self.passenger_count = itinerary['passenger_count']
             self.seat_count = itinerary['seat_count']
 
-
-
             sep = '|'
 
             self.bags = sep.join([str(b) for b in itinerary['bags']])
@@ -171,7 +169,7 @@ class Itinerary(models.Model):
 
 
 class Reservation(models.Model):
-    itinerary_id = models.ForeignKey(Itinerary, on_delete=models.SET_NULL, null=True)
+    itinerary_id = models.ForeignKey(Itinerary, on_delete=models.PROTECT, null=True)
 
     def get_passengers(self):
         Passenger.objects.filter(reservation_id=self.pk)
@@ -190,13 +188,14 @@ class Reservation(models.Model):
     def get_ond(self):
         return (self.itinerary_id.itinerary_origin+"-"+self.itinerary_id.itinerary_destination)
 
-#TODO: create fixed itinerary to reservations
+
 class Passenger(models.Model):
     name = models.CharField(max_length=200)
     surname = models.CharField(max_length=200)
     phone = models.CharField(max_length=200)
+    ptc = models.CharField(max_length=3, default='ADT') #TODO
     profile_id = models.CharField(max_length=2, default='0') #TODO
-    reservation_id = models.ForeignKey(Reservation, on_delete=models.SET_NULL, null=True)
+    reservation_id = models.ForeignKey(Reservation, on_delete=models.PROTECT, null=True)
 
     def add_to_reservation(self, reservation):
         self.reservation_id = reservation

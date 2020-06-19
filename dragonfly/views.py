@@ -326,9 +326,10 @@ def reservation_details(request, pk):
     reservation = get_object_or_404(Reservation, pk=pk)
     itinerary = reservation.itinerary_id
     passengers = reservation.get_passengers()
+    print (len(passengers))
 
     return render(request, 'dragonfly/reservation_details.html', context={'itinerary': itinerary.get_json(),
-                                                                    'checkout': 'No', 'passengers': {k+1: v for k, v in enumerate(passengers)},
+                                                                    'checkout': 'No', 'passengers': {k + 1: v for k, v in enumerate(passengers)},
                                                                     })
 
 
@@ -352,7 +353,10 @@ def create_reservation(request):
     phone3 = request.POST.get('phone3', None)
 
     itinerary_id = request.POST.get('itinerary_id', None)
-    print (itinerary_id)
+
+    itinerary = Itinerary.objects.get(pk=int(itinerary_id))
+    reservation = Reservation(itinerary_id=itinerary)
+    reservation.save()
 
     passengers = []
     paxs = [
@@ -365,22 +369,15 @@ def create_reservation(request):
             passenger = Passenger(name=pax['name'], surname=pax['surname'], phone=pax['phone'])
             passenger.save()
             passengers.append(passenger)
+            reservation.add_passenger(passenger)
+            reservation.save()
 
-    itinerary = Itinerary.objects.get(pk=int(itinerary_id))
-    reservation = Reservation(itinerary_id=itinerary)
-    reservation.save()
-
-    reservation.add_passenger(passenger)
-    reservation.save()
 
     context = {'itinerary': itinerary, 'passengers': passengers, 'reservation': reservation, 'checkout': 'no',
                'itinerary_id': itinerary_id}
 
     if DEBUG: print ('*****************CREATED')
     return redirect(reservation, context=context)
-
-
-    return HttpResponse('ok')
 
 
 def get_airports(request, text='BUE', limit=10):
