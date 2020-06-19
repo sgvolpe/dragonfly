@@ -14,6 +14,10 @@ body{
 
 }
 
+h6{
+    color: var(--font_color);
+}
+
 navbar{
     background: red;
     position: fixed;
@@ -26,6 +30,10 @@ navbar{
 .search-box input {
     border-radius: 0;
     padding: 5px;
+}
+
+.search-box label {
+    font-size: 1rem;
 }
 
 .search-box{
@@ -41,14 +49,15 @@ navbar{
 }
 
 #header{
-    background-image: url('https://picsum.photos/id/42/3456/2304');
+    background-image: url('../../images/dragonfly/backgrounds/1.jpg');
+
     padding-top: 25px;
 }
 
 
 
 .parallax {
-    background-image: url("https://picsum.photos/id/42/3456/2304");
+
     height: 500px;
     width: 100% ;
     text-align: center;
@@ -168,7 +177,7 @@ radnom{
 font-size: 12px;
     padding: 5px 0 0 !important;
     word-wrap: break-word;
-    line-height: 13px;
+    line-height: 13px;//https://picsum.photos/id/42/3456/2304
 }
 
 
@@ -193,4 +202,8 @@ font-size: 12px;
 .sgv_btn_inverse{
     background: var(--font2_color);
     color: var(--primary_color);
+}
+
+.form-control2{
+    background-clip: unset;
 }

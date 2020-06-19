@@ -37,5 +37,16 @@
               {% endfor%}
          </div>
     </div>
-
+    <div class="sgv_divider"></div>
+    <div class="container marketing">
+        <hr>
+        <div class="row"><h5>Trending Routes</h5></div>
+         <div class="row">
+             {% for search in trending_7days %}
+                 <div class="col">
+                     <h6>{{search.origins|decode_name}} - {{search.destinations|decode_name}}</h6>
+                 </div>
+              {% endfor%}
+         </div>
+    </div>
 {% endblock %}

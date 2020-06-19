@@ -160,3 +160,6 @@ Finished 'get_token' in 0.6783618000008573 secs|
 Finished 'get_token' in 0.7130962000010186 secs|
 Finished 'get_token' in 0.7002978000000439 secs|
 Finished 'get_token' in 1.1023753999999997 secs|
+Finished 'get_token' in 1.1108447999999953 secs|
+Finished 'parse_response' in 0.02589649999993071 secs|
+Finished 'send_bfm' in 5.221591999999987 secs|

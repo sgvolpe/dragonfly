@@ -82,5 +82,5 @@ def decode_name(code: str) -> str:
 
 @register.simple_tag
 def range(offset: int, total: int, limit: int) -> list:
-    print (offset, total, limit)
+
     return list(range(offset, total, limit))

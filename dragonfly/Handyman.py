@@ -106,7 +106,6 @@ def get_airports(text='New', limit=10):
 def decode_city(iata: str) -> str:
     try:
         df = pd.read_csv('static/resources/ota/cities.csv') # todo: upper and title
-        print (df[df['IATA code'] == iata]['City name'].tolist()[0])
         return df[df['IATA code'] == iata]['City name'].tolist()[0]
     except Exception as e:
         print (str(e))
