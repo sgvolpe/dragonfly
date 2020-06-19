@@ -5,8 +5,11 @@ from collections import Counter
 
 from .models import Itinerary, Passenger, Reservation, Search
 
+from .forms import UserForm
 from . import Handyman
 from .Api import parse_response, get_token, send_bfm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 from django.db.models import Avg, Sum
 from django.http import HttpResponse, JsonResponse
@@ -295,7 +298,7 @@ def get_shopping_stats(request):
     trending_7days = Search.objects.values('origins', 'destinations').annotate(Sum('hits')).order_by('hits__sum')[:10]
     return {'most_popular': most_popular, 'trending_7days': trending_7days}
 
-
+@login_required
 def test(request):
     return render(request, 'dragonfly/test.html',)
 
@@ -419,3 +422,82 @@ def conversion(request):
     return JsonResponse(data, status=200, safe=False)
 
 
+def user_register(request):
+
+    registered = False
+
+    if request.method == 'POST':
+
+        # Get info from "both" forms
+        # It appears as one form to the user on the .html page
+        user_form = UserForm(data=request.POST)
+
+
+        # Check to see both forms are valid
+        if user_form.is_valid():
+
+            # Save User Form to Database
+            user = user_form.save()
+
+            # Hash the password
+            user.set_password(user.password)
+
+            # Update with Hashed password
+            user.save()
+            # Registration Successful!
+            registered = True
+
+        else:
+            # One of the forms was invalid if this else gets called.
+            print(user_form.errors)
+
+    else:
+        # Was not an HTTP post so we just render the forms as blank.
+        user_form = UserForm()
+
+
+    # This is the render and context dictionary to feed
+    # back to the registration.html file page.
+    return render(request,'dragonfly/registration.html',
+                          {'user_form':user_form,
+                           'registered':registered})
+
+
+@login_required
+def user_logout(request):
+    # Log out the user.
+    logout(request)
+    # Return to homepage.
+    return HttpResponseRedirect(reverse('index'))
+
+
+def user_login(request):
+
+    if request.method == 'POST':
+        # First get the username and password supplied
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        # Django's built-in authentication function:
+        user = authenticate(username=username, password=password)
+
+        # If we have a user
+        if user:
+            #Check it the account is active
+            if user.is_active:
+                # Log the user in.
+                login(request,user)
+                # Send the user back to some page.
+                # In this case their homepage.
+                return HttpResponseRedirect(reverse('index'))
+            else:
+                # If account is not active:
+                return HttpResponse("Your account is not active.")
+        else:
+            print("Someone tried to login and failed.")
+            print("They used username: {} and password: {}".format(username,password))
+            return HttpResponse("Invalid login details supplied.")
+
+    else:
+        #Nothing has been provided for username or password.
+        return render(request, 'dragonfly/login.html', {})

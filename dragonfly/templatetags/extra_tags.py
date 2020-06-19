@@ -1,7 +1,9 @@
 import datetime, json
 from django import template
-
 from django.shortcuts import render
+
+from dragonfly import Handyman
+
 register = template.Library()
 
 @register.filter
@@ -56,6 +58,26 @@ def parse_time(value: str) -> str:
 @register.filter(name='cointains')
 def cointains(string: str, substing:str) -> bool:
     return str(substing) in str(string)\
+
+@register.filter(name='limit')
+def limit(l: list, el_count:int) -> list:
+    if el_count > len(l): return l
+    return l[:el_count]
+
+
+@register.filter(name='marketing_text')
+def marketing_text(promo) -> str:
+    return 'Enjoy one of our selected promotions with discounts'
+
+@register.filter(name='marketing_text')
+def marketing_text(promo) -> str:
+    return 'Enjoy one of our selected promotions with discounts'
+
+@register.filter(name='decode_name')
+def decode_name(code: str) -> str:
+    try: return Handyman.decode_city(code)
+    except: return code
+
 
 
 @register.simple_tag

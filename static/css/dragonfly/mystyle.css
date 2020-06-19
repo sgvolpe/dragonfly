@@ -2,6 +2,7 @@
   --font_color: #565a5c;
   --font2_color: white;
   --primary_color: rebeccapurple;
+  --secondary_color: #4b4353; ;
   --panel_color: white;
 }
 
@@ -28,23 +29,27 @@ navbar{
 }
 
 .search-box{
-    background: var(--primary_color);
+    top:15px;
+    background: var(--secondary_color);
     color: var(--font2_color);
     font-size: 1.5rem;
     opacity: 0.95;
+    box-shadow: 0 8px 6px -6px black;
 
-    //background-image: url('../../images/ota/3.jpg');
+    background-image: url('../static/images/dragonfly/3.jpg');
 
 }
 
 #header{
-    background-image: url('../../images/ota/3.jpg');
+    background-image: url('https://picsum.photos/id/42/3456/2304');
+    padding-top: 25px;
 }
+
 
 
 .parallax {
     background-image: url("https://picsum.photos/id/42/3456/2304");
-    height: 250px;
+    height: 500px;
     width: 100% ;
     text-align: center;
     color:white;
@@ -178,4 +183,14 @@ font-size: 12px;
     background: var(--primary_color);
     margin: 10px;
     padding: 5px
+}
+
+.sgv_btn{
+    background: var(--primary_color);
+    color: var(--font2_color);
+}
+
+.sgv_btn_inverse{
+    background: var(--font2_color);
+    color: var(--primary_color);
 }

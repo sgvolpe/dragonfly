@@ -1,8 +1,23 @@
 __author__ = 'SGV'
 
 import datetime
+from django.contrib.auth.models import User
 from django.db import models
 from django.forms.models import model_to_dict
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, default='')
+    surname = models.CharField(max_length=200, default='')
+    phone = models.CharField(max_length=200, default='')
+
+    #add to reservations
+    #profile_id = models.CharField(max_length=2, default='0')  # TODO
+    #portfolio_site = models.URLField(blank=True)
+    #profile_pic = models.ImageField(upload_to='profile_pics', blank=True)
+
+    def __str__(self):
+        return self.user.username
 
 
 class Search(models.Model):
@@ -193,7 +208,7 @@ class Passenger(models.Model):
     name = models.CharField(max_length=200)
     surname = models.CharField(max_length=200)
     phone = models.CharField(max_length=200)
-    ptc = models.CharField(max_length=3, default='ADT') #TODO
+    ptc = models.CharField(max_length=3, default='ADT')
     profile_id = models.CharField(max_length=2, default='0') #TODO
     reservation_id = models.ForeignKey(Reservation, on_delete=models.PROTECT, null=True)
 

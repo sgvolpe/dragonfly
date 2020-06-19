@@ -1,15 +1,54 @@
 {% load static %}
-<div class="collapse" id="navbarToggleExternalContent">
-<div class="bg-dark p-4">
-  <h4 class="text-white">Collapsed content</h4>
-  <span class="text-muted">Toggleable via the navbar brand.</span>
-</div>
-</div>
-<nav class="navbar navbar-dark " style="background:rebeccapurple">
-<a class="navbar-brand" href="{% url 'index' %}"><i class="fas asd"><img src="{% static 'images/dragonfly/dragonfly_ico.svg' %}" alt="" style="height:25px;height:25px"> </i> Dragonfly</a>
-<a class="navbar-brand" href="emailto:sgvolpe@gmail.com"><i class="far fa-envelope-open"></i> Contact Us</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 
-  <span class="navbar-toggler-icon"></span>
-</button>
+<nav class=" navbar navbar-expand-lg navbar-dark default-color" style="background:rebeccapurple">
+  <a class="navbar-brand" href="{% url 'index' %}"><i class="fas asd"><img src="{% static 'images/dragonfly/dragonfly_ico.svg' %}" alt="" style="height:25px;height:25px"> </i> Dragonfly</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+
+      </li>
+      <li class="nav-item">
+
+      </li>
+      <li class="nav-item">
+
+      </li>
+      <li class="nav-item dropdown justify-content-end">
+        <a class="navbar-brand" href="emailto:sgvolpe@gmail.com"><i class="far fa-envelope-open"></i> Contact Us</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+          aria-labelledby="navbarDropdownMenuLink-333">
+          {% if user.is_authenticated  %}
+            <small><a class="dropdown-item" href="#" data-toggle="modal" ></i>{{user}}</a></small>
+            <small><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"></i>Logout</a></small>
+          {% else %}
+            <small><a class="dropdown-item" href="{% url 'user_login' %}">Log in</a></small>
+          {% endif %}
+
+
+        </div>
+      </li>
+    </ul>
+  </div>
+
 </nav>

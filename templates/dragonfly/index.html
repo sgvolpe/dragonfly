@@ -1,5 +1,6 @@
 {% extends 'dragonfly/base.html' %}
 {% load static %}
+{% load extra_tags %}
 {% block title %}
     <title>Dragonfly Travel</title>
 {% endblock %}
@@ -9,50 +10,32 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <div class="container" >
-        <div class="row" id="header" >
+
+    <div id="header" class="parallax">
             {% include 'dragonfly/search_box.html' %}
-        </div>
-        <div class="row sgv_divider"></div>
-        <div class="row sgv_divider"></div>
+    </div>
+    <div class="container marketing">
+    </div>
+    <div class="sgv_divider"></div>
+    <div class="container marketing">
         <div class="row">
-            {% include 'dragonfly/carrousel.html' %}
-        </div>
-        <div class="row sgv_divider"></div>
-        <div class="container">
-        <div class="row">
-            <div class="col card sgv_panel">
-                <h4>Promotions</h4>
-                {% for promo in promotions %}
-                    {% include 'dragonfly/promotion_bar.html' with promo=promo%}
+            {% for promo in promotions|limit:3 %}
+                {% include 'dragonfly/promotion_bar.html' with promo=promo %}
 
-                {% endfor %}
-            </div>
-            <div class="col card sgv_panel">
-                <div class="row">
-                    <h4>Most Popular</h4>
-                </div>
-                {% for search in most_popular %}
-                     <div class="row">
-                        {{search.origins}} - {{search.destinations}}
-                    </div>
-                {% endfor%}
-            </div>
-            <div class="col card sgv_panel">
-                <h4>Trending</h4>
-                {% for search in trending_7days %}
-                     <div class="row">
-                        {{search.origins}} - {{search.destinations}}
-                    </div>
-                {% endfor%}
-            </div>
-
-        </div></div>
-        <div class="row" style="">
-        <div class="col" style="">
-
+            {% endfor %}
         </div>
-        </div>
+    </div>
+    <div class="sgv_divider"></div>
+    <div class="container marketing">
+        <hr>
+        <div class="row"><h5>Most Popular Routes</h5></div>
+         <div class="row">
+             {% for search in most_popular %}
+                 <div class="col">
+                     <h6>{{search.origins|decode_name}} - {{search.destinations|decode_name}}</h6>
+                 </div>
+              {% endfor%}
+         </div>
     </div>
 
 {% endblock %}
