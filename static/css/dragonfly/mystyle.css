@@ -30,6 +30,7 @@ navbar{
 .search-box input {
     border-radius: 0;
     padding: 5px;
+    font-size:1.2rem;
 }
 
 .search-box label {
@@ -38,18 +39,18 @@ navbar{
 
 .search-box{
     top:15px;
+        padding-top: 24px;
     background: var(--secondary_color);
     color: var(--font2_color);
     font-size: 1.5rem;
     opacity: 0.95;
     box-shadow: 0 8px 6px -6px black;
-
     background-image: url('../static/images/dragonfly/3.jpg');
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 #header{
-    background-image: url('../../images/dragonfly/backgrounds/1.jpg');
+    background-image: url('../../images/dragonfly/backgrounds/3.jpg');
 
     padding-top: 25px;
 }

@@ -1,0 +1,60 @@
+{% extends 'dragonfly/base.html' %}
+{% load static %}
+{% block title %}
+    <title>Contact Form</title>
+{% endblock %}
+{% load extra_tags %}
+{% block content %}
+
+<div class="container">
+    <div class="sgv_divider"></div>
+
+        <form method="GET" action="{% url 'send_contact_form' %}" id="search-form">
+        {% csrf_token %}
+            <div class="card border-primary rounded-0">
+                <div class="card-header p-0">
+                    <div class="text-white text-center py-2" style="background:rebeccapurple">
+                        <h3><i class="fa fa-envelope"></i> Contact Form</h3>
+                        <p class="m-0">Glad to hear from you</p>
+                    </div>
+                </div>
+                <div class="card-body p-3">
+
+                    <!--Body-->
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                            </div>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="example@dragonfly.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-comment"></i></div>
+                            </div>
+                            <textarea class="form-control" placeholder="Your message here" required name="message"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" value="Send" class="btn btn-block rounded-0 py-2 sgv_btn" >
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+</div>
+
+{% endblock %}

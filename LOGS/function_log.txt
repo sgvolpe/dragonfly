@@ -1,165 +1,325 @@
-# # # LOG START # # #Finished 'get_token' in 1.121957899999984 secs|
-Finished 'get_token' in 1.1193559000000732 secs|
-Finished 'get_token' in 1.08999510000001 secs|
-Finished 'get_token' in 1.1050844 secs|
-Finished 'parse_response' in 0.008117200000000935 secs|
-Finished 'get_token' in 1.0940999000000002 secs|
-Finished 'parse_response' in 0.007725000000000648 secs|
-Finished 'get_token' in 1.111074 secs|
-Finished 'parse_response' in 0.007598800000000239 secs|
-Finished 'get_token' in 0.6752382000000026 secs|
-Finished 'parse_response' in 0.007668200000001235 secs|
-Finished 'get_token' in 1.1154027000000002 secs|
-Finished 'get_token' in 0.6841077000000002 secs|
-Finished 'parse_response' in 0.007182300000000197 secs|
-Finished 'send_bfm' in 5.167207100000001 secs|
-Finished 'parse_response' in 0.0063563000000002035 secs|
-Finished 'send_bfm' in 4.7329796 secs|
-Finished 'get_token' in 1.1247766999999982 secs|
-Finished 'get_token' in 1.112546899999984 secs|
-Finished 'get_token' in 0.7043982999999798 secs|
-Finished 'parse_response' in 0.007054299999992963 secs|
-Finished 'send_bfm' in 4.668557299999975 secs|
-Finished 'get_token' in 1.217454399999994 secs|
-Finished 'parse_response' in 0.041090900000000374 secs|
-Finished 'send_bfm' in 5.644545799999996 secs|
-Finished 'get_token' in 1.1155179000000004 secs|
-Finished 'parse_response' in 0.017039400000001592 secs|
-Finished 'send_bfm' in 5.712684299999992 secs|
-Finished 'get_token' in 1.2190339000001131 secs|
-Finished 'parse_response' in 0.0003512999999202293 secs|
-Finished 'send_bfm' in 5.070992500000102 secs|
-Finished 'get_token' in 1.0934832000002643 secs|
-Finished 'parse_response' in 0.03687019999961194 secs|
-Finished 'send_bfm' in 5.442048299999442 secs|
-Finished 'get_token' in 0.7006755000002158 secs|
-Finished 'get_token' in 0.6951050000006944 secs|
-Finished 'get_token' in 0.6644765000000916 secs|
-Finished 'get_token' in 0.7036877000009554 secs|
-Finished 'get_token' in 0.6885169999986829 secs|
-Finished 'parse_response' in 0.004590200000166078 secs|
-Finished 'send_bfm' in 4.840481400000499 secs|
-Finished 'get_token' in 0.6943903999999748 secs|
-Finished 'parse_response' in 0.004660999999032356 secs|
-Finished 'send_bfm' in 4.833836899999369 secs|
-Finished 'get_token' in 0.6929145000012795 secs|
-Finished 'parse_response' in 0.0149621999989904 secs|
-Finished 'send_bfm' in 5.289749800000209 secs|
-Finished 'get_token' in 1.0927869999995892 secs|
-Finished 'parse_response' in 0.01144660000136355 secs|
-Finished 'send_bfm' in 11.19225749999896 secs|
-Finished 'get_token' in 1.0975211000004492 secs|
-Finished 'parse_response' in 0.00950129999910132 secs|
-Finished 'send_bfm' in 10.506179899999552 secs|
-Finished 'get_token' in 0.6858670000001439 secs|
-Finished 'parse_response' in 0.04331040000033681 secs|
-Finished 'send_bfm' in 10.064058600000862 secs|
-Finished 'get_token' in 1.0881534000000102 secs|
-Finished 'parse_response' in 0.012357700001302874 secs|
-Finished 'send_bfm' in 10.943895800000973 secs|
-Finished 'get_token' in 0.6874423999997816 secs|
-Finished 'parse_response' in 0.017055400001481757 secs|
-Finished 'send_bfm' in 8.231564100000469 secs|
-Finished 'get_token' in 0.680332100000669 secs|
-Finished 'parse_response' in 0.024339100000361213 secs|
-Finished 'send_bfm' in 8.851093700001002 secs|
-Finished 'get_token' in 0.6826873999998497 secs|
-Finished 'parse_response' in 0.05088180000166176 secs|
-Finished 'send_bfm' in 6.285614099999293 secs|
-Finished 'get_token' in 0.6680881999982375 secs|
-Finished 'get_token' in 0.6862302999998064 secs|
-Finished 'parse_response' in 0.026186700000835117 secs|
-Finished 'send_bfm' in 4.8057733999994525 secs|
-Finished 'get_token' in 0.6909176000008301 secs|
-Finished 'get_token' in 0.6921698999994987 secs|
-Finished 'get_token' in 1.0874736999994639 secs|
-Finished 'get_token' in 0.6783008000002155 secs|
-Finished 'get_token' in 0.6859440999996878 secs|
-Finished 'parse_response' in 0.025138999999398948 secs|
-Finished 'send_bfm' in 7.206411099999968 secs|
-Finished 'get_token' in 0.712456100000054 secs|
-Finished 'parse_response' in 0.02458650000153284 secs|
-Finished 'send_bfm' in 5.950151499999265 secs|
-Finished 'get_token' in 1.1370004000000336 secs|
-Finished 'parse_response' in 0.026983699999618693 secs|
-Finished 'send_bfm' in 5.1236401999995 secs|
-Finished 'get_token' in 0.916642199999842 secs|
-Finished 'parse_response' in 0.023912399999971967 secs|
-Finished 'send_bfm' in 5.552925400001186 secs|
-Finished 'get_token' in 0.8844189999999799 secs|
-Finished 'get_token' in 0.7055075999996916 secs|
-Finished 'get_token' in 0.7668006000003516 secs|
-Finished 'parse_response' in 0.05300589999933436 secs|
-Finished 'send_bfm' in 4.87798660000044 secs|
-Finished 'get_token' in 0.7006080000010115 secs|
-Finished 'parse_response' in 0.031514799999058596 secs|
-Finished 'send_bfm' in 4.769236000000092 secs|
-Finished 'get_token' in 1.0901534000004176 secs|
-Finished 'parse_response' in 0.03628819999903499 secs|
-Finished 'send_bfm' in 6.6884430999998585 secs|
-Finished 'get_token' in 0.6772655000004306 secs|
-Finished 'parse_response' in 0.06236429999989923 secs|
-Finished 'send_bfm' in 6.909982499999387 secs|
-Finished 'get_token' in 0.6858677000000171 secs|
-Finished 'parse_response' in 0.040125999999872874 secs|
-Finished 'send_bfm' in 8.644651700000395 secs|
-Finished 'get_token' in 0.6973217000013392 secs|
-Finished 'parse_response' in 0.02588579999974172 secs|
-Finished 'send_bfm' in 5.642250700000659 secs|
-Finished 'get_token' in 1.0930114000002504 secs|
-Finished 'parse_response' in 0.023511899998993613 secs|
-Finished 'send_bfm' in 7.393861200000174 secs|
-Finished 'get_token' in 0.6947536000006949 secs|
-Finished 'parse_response' in 0.04504150000138907 secs|
-Finished 'send_bfm' in 4.428675499999372 secs|
-Finished 'get_token' in 0.7653580999995029 secs|
-Finished 'parse_response' in 0.030703600001288578 secs|
-Finished 'send_bfm' in 5.692103699999279 secs|
-Finished 'get_token' in 0.687852600000042 secs|
-Finished 'parse_response' in 0.02811199999996461 secs|
-Finished 'send_bfm' in 5.05020390000027 secs|
-Finished 'get_token' in 0.6912341000006563 secs|
-Finished 'parse_response' in 0.008765500000663451 secs|
-Finished 'send_bfm' in 6.464944400000604 secs|
-Finished 'get_token' in 1.0955030000004626 secs|
-Finished 'parse_response' in 0.00868829999853915 secs|
-Finished 'send_bfm' in 7.92250839999906 secs|
-Finished 'get_token' in 0.6907439000005979 secs|
-Finished 'parse_response' in 0.01509019999866723 secs|
-Finished 'send_bfm' in 3.9725623000013 secs|
-Finished 'get_token' in 0.6809106000000611 secs|
-Finished 'parse_response' in 0.026421200000186218 secs|
-Finished 'send_bfm' in 8.966174600000159 secs|
-Finished 'get_token' in 0.7064824999997654 secs|
-Finished 'get_token' in 0.6585622000002331 secs|
-Finished 'get_token' in 0.6808593000005203 secs|
-Finished 'get_token' in 0.6806797999997798 secs|
-Finished 'get_token' in 0.6966984999999113 secs|
-Finished 'parse_response' in 0.012855900000431575 secs|
-Finished 'send_bfm' in 2.8770621000003302 secs|
-Finished 'get_token' in 0.713188400000945 secs|
-Finished 'parse_response' in 0.015883399999438552 secs|
-Finished 'send_bfm' in 2.9523527000001195 secs|
-Finished 'get_token' in 0.6785763000007137 secs|
-Finished 'parse_response' in 0.019556000001102802 secs|
-Finished 'send_bfm' in 3.2346873999995296 secs|
-Finished 'get_token' in 0.6892568000002939 secs|
-Finished 'parse_response' in 0.0459288000001834 secs|
-Finished 'send_bfm' in 3.308105699999942 secs|
-Finished 'get_token' in 0.7399724000006245 secs|
-Finished 'parse_response' in 0.052271700000346755 secs|
-Finished 'send_bfm' in 9.303295499999876 secs|
-Finished 'get_token' in 0.6726977999987866 secs|
-Finished 'parse_response' in 0.007751799999823561 secs|
-Finished 'send_bfm' in 3.4809075000011944 secs|
-Finished 'get_token' in 0.6919687000008707 secs|
-Finished 'get_token' in 1.0863912999993772 secs|
-Finished 'parse_response' in 0.012367600000288803 secs|
-Finished 'send_bfm' in 4.146261100000629 secs|
-Finished 'get_token' in 0.6783618000008573 secs|
-Finished 'get_token' in 0.7130962000010186 secs|
-Finished 'get_token' in 0.7002978000000439 secs|
-Finished 'get_token' in 1.1023753999999997 secs|
-Finished 'get_token' in 1.1108447999999953 secs|
-Finished 'parse_response' in 0.02589649999993071 secs|
-Finished 'send_bfm' in 5.221591999999987 secs|
+datetime,function_name,process_time (s),result,signature,
+
+2020-06-25 14:56:45.090537,'get_token',1.1096886999999995,T1RLAQJ6dtSf1FtrnqGP9wpIGG59gAgEfhDzwbQTLHEsOdPo/s, 
+2020-06-25 14:56:49.292278,'parse_response',0.027991700000001174,{0: {'legs': [{'ref': 12}, {'ref': 18}], 'currency, <Response [200]>
+2020-06-25 14:56:49.298276,'send_bfm',5.317722499999999,{0: {'legs': [{'ref': 12}, {'ref': 18}], 'currency, origins='MVD,'|destinations='BUE,'|dates='2020-06-28,2020-08-13,'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 14:59:16.269417,'checkout',0.054761700000000246,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2894'>|pk=2894
+2020-06-25 15:06:08.927757,'get_promotions',0.047423400000000004,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 15:06:09.654795,'index',0.7743237999999999,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 15:10:32.119119,'get_promotions',0.036138299999997514,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 15:10:32.153119,'index',0.06954610000000372,'dragonfly' is not a registered namespace, <WSGIRequest: GET '/'>
+2020-06-25 15:11:10.164761,'get_promotions',0.04191629999999691,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 15:11:10.756761,'index',0.6332906999999892,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 15:52:21.859127,'get_promotions',0.03714909999999971,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 15:52:22.491094,'index',0.669168,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 15:54:37.837731,'get_promotions',0.04134849999999801,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 15:54:38.464733,'index',0.6686909999999955,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 15:55:10.970154,'get_promotions',0.039193499999996106,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 15:55:11.660119,'index',0.7292352000000051,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 15:57:30.571452,'get_token',1.1367665999999872,T1RLAQI8NiCCY8NN5yWa555/qHYsU/sZ3hArs1pGqosOJLa818, 
+2020-06-25 15:57:30.575450,'send_bfm',1.1414062000000058,string index out of range, origins=''|destinations=''|dates=''|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 15:57:30.628524,'search',1.1952853999999888,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search'>
+2020-06-25 15:57:44.074586,'get_token',0.6865418000000432,T1RLAQJ1cL4SxRb+enbtJOqnc5FcVrJJ/hBx/Hk1Kih6zyTbI9, 
+2020-06-25 15:57:44.077600,'send_bfm',0.6905073000000357,string index out of range, origins=''|destinations=''|dates=''|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 15:57:44.102624,'search',0.7159972000000039,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search'>
+2020-06-25 15:57:50.180130,'get_promotions',0.03980300000000625,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 15:57:50.777999,'index',0.6374749999999949,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:01:58.100240,'get_promotions',0.039291599999955906,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:01:58.641580,'index',0.5804452999999512,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:02:02.107800,'see_itinerary',0.02151359999993474,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:24.474616,'see_itinerary',0.050699199999999944,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:44.838505,'see_itinerary',0.020878599999999636,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:47.539104,'see_itinerary',0.019297599999998027,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:48.499209,'see_itinerary',0.018998899999999708,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:54.463315,'see_itinerary',0.018643599999997207,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:56.828070,'see_itinerary',0.029206000000002064,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:58.379877,'see_itinerary',0.019769399999994164,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:58.949882,'see_itinerary',0.019293700000005742,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:03:59.453063,'see_itinerary',0.032814799999997035,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:04:02.253487,'see_itinerary',0.02069079999999701,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:04:10.393386,'see_itinerary',0.022127600000004577,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:04:11.248085,'see_itinerary',0.017884300000005737,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:04:13.075402,'see_itinerary',0.021148700000004794,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:05:34.503776,'see_itinerary',0.04998679999999922,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:05:38.576059,'see_itinerary',0.02165019999999629,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:06:15.650148,'see_itinerary',0.018554100000002904,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:06:24.098762,'see_itinerary',0.0202078999999884,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:07:10.481145,'see_itinerary',0.02170139999998355,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:07:14.518652,'see_itinerary',0.01919670000000906,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:08:13.776549,'see_itinerary',0.02418649999998479,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:08:41.138180,'see_itinerary',0.019632099999967068,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:08:46.450146,'see_itinerary',0.018336599999997816,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:08:56.121225,'see_itinerary',0.019785000000013042,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:09:16.670262,'see_itinerary',0.01966639999994868,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:09:26.476080,'see_itinerary',0.018819399999983943,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:09:55.989260,'see_itinerary',0.019729400000016994,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:10:25.104583,'see_itinerary',0.021463900000014746,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:10:46.178125,'see_itinerary',0.021427700000003824,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:11:26.699716,'see_itinerary',0.019615899999962494,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:11:27.875925,'see_itinerary',0.023441000000048007,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:11:38.662865,'see_itinerary',0.02211130000000594,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:12:00.383262,'see_itinerary',0.021072300000014366,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:12:16.105226,'see_itinerary',0.01864380000000665,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/1527'>|pk=1527
+2020-06-25 16:12:36.984340,'see_itinerary',0.032021400000019185,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/see_itinerary/2027'>|pk=2027
+2020-06-25 16:13:11.941949,'get_promotions',0.04313860000002023,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:13:12.622955,'index',0.7235603999999967,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:13:20.064807,'get_promotions',0.04221910000001117,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:13:20.666374,'index',0.64459260000001,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:13:25.967576,'get_promotions',0.04569979999996576,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:13:26.610545,'index',0.6890083000000686,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:13:31.171249,'get_promotions',0.03971050000006926,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:13:31.758844,'index',0.6269725999999309,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:14:20.954131,'get_promotions',0.047463399999969624,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:14:21.644133,'index',0.7374149999999418,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:14:34.579634,'get_promotions',0.044780500000001666,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:14:35.147610,'index',0.6129207000000179,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:18:06.457064,'get_promotions',0.06056019999994078,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:18:07.199601,'index',0.8033966000000419,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:19:22.595759,'get_promotions',0.0432388000000401,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:19:23.176717,'index',0.6237512000000152,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:19:51.363331,'get_promotions',0.04391129999999066,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:19:51.376351,'index',0.056710599999973965,Invalid block tag on line 43: 'static'. Did you forget to register or load this tag?, <WSGIRequest: GET '/'>
+2020-06-25 16:20:05.852546,'get_promotions',0.04362550000007559,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:20:06.412288,'index',0.6036438999999518,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:20:24.442645,'get_promotions',0.04392029999996794,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:20:25.076333,'index',0.6781753999999864,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:20:58.161026,'get_promotions',0.044514699999922414,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:20:58.752436,'index',0.6357639999999947,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:21:07.295808,'get_promotions',0.04276219999997011,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:21:07.877488,'index',0.6244731000000456,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:23:07.694326,'get_promotions',0.047699700000066514,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:23:08.349364,'index',0.7020090999999411,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:25:16.469241,'get_promotions',0.04892700000004879,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:25:17.053820,'index',0.633845600000086,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:25:33.097680,'get_promotions',0.04271659999994881,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:25:33.724284,'index',0.6700514999999996,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:25:58.780117,'get_promotions',0.06008719999999812,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:25:59.510120,'index',0.7897907999999916,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:28:42.048220,'get_promotions',0.04961270000012519,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:28:42.701216,'index',0.7023048999999446,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:29:06.181452,'get_promotions',0.04658370000015566,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:29:06.780418,'index',0.6464607999998861,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:29:42.464767,'get_promotions',0.044317799999817,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:29:43.071363,'index',0.6513989000000038,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:30:44.062238,'get_promotions',0.04294959999992898,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:30:44.761488,'index',0.7413895999998203,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:31:23.220064,'get_promotions',0.049841900000046735,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:31:23.875537,'index',0.7056442000000516,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:31:43.922053,'get_promotions',0.045940899999777685,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:31:44.538065,'index',0.6614145000000917,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:31:58.725034,'get_promotions',0.04173189999983151,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:31:59.376802,'index',0.694101000000046,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:32:21.731851,'get_promotions',0.047234300000127405,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:32:22.398886,'index',0.7145054999998592,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:32:33.566098,'get_promotions',0.054315699999961,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:32:34.291104,'index',0.7793653000001086,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:33:34.054777,'get_promotions',0.04823309999983394,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:33:34.808801,'index',0.8026741999999558,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:35:25.881160,'get_promotions',0.04858820000000108,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:35:26.615027,'index',0.7828887000000009,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:37:32.005359,'get_promotions',0.04513519999999982,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:37:34.581381,'index',2.6204983,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:41:24.801177,'get_promotions',0.04534220000000033,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 16:41:26.672755,'index',1.9167668999999998,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 16:41:33.753223,'get_token',1.2881566000000007,T1RLAQKP3wPoPsOZeWfVdaFO0p+vBxfqjRAunqAadJI2pyTYES, 
+2020-06-25 16:41:35.012604,'parse_response',6.470000000113885e-05,No Options Found, <Response [200]>
+2020-06-25 16:41:35.016639,'send_bfm',2.5518199,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD,'|destinations='BUE,'|dates='2020-06-25,2020-06-25,'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:41:35.028630,'search',2.5736390999999994,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=56l75ts2TG0ry4DQEjm9CnluUM2SPSjscXfOTpbsoOl2B5WxVVWs8TC7A05BZ2bJ&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=BUE%2C&dates=2020-06-25%2C2020-06-25%2C'>
+2020-06-25 16:42:03.332832,'get_token',1.0043589000000002,T1RLAQJMJ0DBqdFM18FN3xMKhN6k4KCsfRCWpXnlXCxMhrKwle, 
+2020-06-25 16:42:04.875324,'parse_response',4.120000000007451e-05,No Options Found, <Response [200]>
+2020-06-25 16:42:04.880325,'send_bfm',2.5520644999999997,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD,'|destinations='BUE,'|dates='2020-06-25,2020-06-25,'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:42:04.915323,'search',2.5950562,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=56l75ts2TG0ry4DQEjm9CnluUM2SPSjscXfOTpbsoOl2B5WxVVWs8TC7A05BZ2bJ&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=BUE%2C&dates=2020-06-25%2C2020-06-25%2C'>
+2020-06-25 16:46:40.978013,'get_token',1.1381554000000023,T1RLAQKUioz2XbobBUsRoTv/wIyI7WLFsBBqqaoMEhLxddEEz0, 
+2020-06-25 16:46:42.009344,'parse_response',6.0200000000065756e-05,No Options Found, <Response [200]>
+2020-06-25 16:46:42.014342,'send_bfm',2.1741895999999983,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-01'|adt=3|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:46:47.721629,'get_token',0.6936347999999981,T1RLAQL/Co8XnTRkTM/MaYdPWqSwUkozoBBwy2xtgPbioXk2bm, 
+2020-06-25 16:46:49.067399,'parse_response',6.300000000436512e-05,No Options Found, <Response [200]>
+2020-06-25 16:46:49.071396,'send_bfm',2.0434627999999933,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:46:54.771512,'get_token',0.6861466999999948,T1RLAQK/vOY98j+WASBKumoRSW3Nr04bqRCfDHmhz+YwOJSHFP, 
+2020-06-25 16:46:55.850168,'parse_response',5.69000000041342e-05,No Options Found, <Response [200]>
+2020-06-25 16:46:55.854164,'send_bfm',1.7689961000000096,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-08-31'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:47:01.644984,'get_token',0.7765866000000017,T1RLAQIyTeL4vgqWVHI/msnDXoRx9BOORxCyN7pvle0Fd5gy8i, 
+2020-06-25 16:47:02.730348,'parse_response',5.1199999987261435e-05,No Options Found, <Response [200]>
+2020-06-25 16:47:02.734348,'send_bfm',1.8657041999999961,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:47:08.430690,'get_token',0.6809707000000031,T1RLAQICM9yJL6tl6GF+hJvL+OqXFXTatBAydVEX2J5h35Mtsd, 
+2020-06-25 16:47:12.602250,'parse_response',0.005323299999986375,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, <Response [200]>
+2020-06-25 16:47:12.607255,'send_bfm',4.8582839000000035,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-01'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:47:19.729232,'get_token',1.1124882000000014,T1RLAQJCKMYF1B9JWCGz0r0enBIEgpDTDRBF8IXAjO4drq7yIO, 
+2020-06-25 16:47:24.198817,'parse_response',0.016749099999998407,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, <Response [200]>
+2020-06-25 16:47:24.205781,'send_bfm',5.58983529999999,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-08'|adt=1|cnn=2|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:47:31.008883,'get_token',0.7273899000000057,T1RLAQIfGoxVG7peO8XmJFUY+FLj4sU8+hBBLm/+l0fHl1hV0f, 
+2020-06-25 16:47:35.275660,'parse_response',0.033768599999987714,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', <Response [200]>
+2020-06-25 16:47:35.282656,'send_bfm',5.001523899999995,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', origins='MVD'|destinations='BUE'|dates='2020-08-24,2020-08-31'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:48:38.647410,'get_token',1.4006480000000003,T1RLAQKX+Zmu4S3cDpIkRqPKOdow0DlnixCNJY7B3EfHDpJaop, 
+2020-06-25 16:48:39.746120,'parse_response',3.959999999914032e-05,No Options Found, <Response [200]>
+2020-06-25 16:48:39.750124,'send_bfm',2.5042523999999986,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:48:45.470760,'get_token',0.7020628000000002,T1RLAQLUs61PwXy++HoAe94nk9ukAQjGBhAPumw5WLzcmOIi55, 
+2020-06-25 16:48:46.535400,'parse_response',3.770000000002938e-05,No Options Found, <Response [200]>
+2020-06-25 16:48:46.539401,'send_bfm',1.7712882000000008,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:49:06.788525,'get_token',0.7104927000000014,T1RLAQJ+wPXWLu4rI0WeNne5CU4VGJzGrRAOw4v3ii/gkfZQjN, 
+2020-06-25 16:49:07.817711,'parse_response',5.940000000137502e-05,No Options Found, <Response [200]>
+2020-06-25 16:49:07.821699,'send_bfm',1.7439932999999996,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-01'|adt=1|cnn=1|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:49:13.957868,'get_token',1.1184227,T1RLAQKGN9h2xkB3go722QaP/12PugCztRAmmTMDGSqA8XH3ze, 
+2020-06-25 16:49:14.980575,'parse_response',4.900000000063187e-05,No Options Found, <Response [200]>
+2020-06-25 16:49:14.983574,'send_bfm',2.1441333999999976,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=1|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:49:20.750550,'get_token',0.7515463999999987,T1RLAQL2b3PS8rrCEi20DaZ8Ax2qiD4alhDcrNESFO0mTfWOL1, 
+2020-06-25 16:49:21.965032,'parse_response',8.539999999968018e-05,No Options Found, <Response [200]>
+2020-06-25 16:49:21.972049,'send_bfm',1.9731398999999996,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-08-31'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:49:27.674585,'get_token',0.6874317999999988,T1RLAQJikuxkUcM31ZsXru42T5OGLIbWUhAHjOPCwqBWxUzErb, 
+2020-06-25 16:49:28.743963,'parse_response',3.949999999974807e-05,No Options Found, <Response [200]>
+2020-06-25 16:49:28.748963,'send_bfm',1.7613844000000043,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-09-07'|adt=3|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:49:34.453624,'get_token',0.6878676999999982,T1RLAQK1SzGrMctkI7erDRB2BQHZNjvlvBDbsyMc8+Cr1YxRc7, 
+2020-06-25 16:49:38.513650,'parse_response',0.0023513000000008333,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, <Response [200]>
+2020-06-25 16:49:38.517652,'send_bfm',4.752694399999996,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-01'|adt=1|cnn=1|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:49:46.954248,'get_token',1.1007955999999979,T1RLAQJj5uVQTvWDfS9GfOkLUn4Rl3xhgBCIh5FE1nDq1NFRTX, 
+2020-06-25 16:49:51.339184,'parse_response',0.006362899999999172,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, <Response [200]>
+2020-06-25 16:49:51.345191,'send_bfm',5.492260199999997,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=1|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:49:58.940332,'get_token',0.6926231999999999,T1RLAQJr8grYVc3DnL56tfhlRLSFU9RmCRA8Pn53/rRgI65Qxc, 
+2020-06-25 16:50:03.315502,'parse_response',0.013772599999995805,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', <Response [200]>
+2020-06-25 16:50:03.322481,'send_bfm',5.075577000000003,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', origins='MVD'|destinations='BUE'|dates='2020-08-24,2020-08-31'|adt=1|cnn=0|inf=1|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:50:11.559080,'get_token',1.0087402999999995,T1RLAQJhdswS5s0KUOi/MOGEmpkSH7L00RCHt549CgXQHlV/4Y, 
+2020-06-25 16:50:16.600865,'parse_response',0.014440100000001621,{0: {'legs': [{'ref': 1}, {'ref': 11}], 'currency', <Response [200]>
+2020-06-25 16:50:16.610865,'send_bfm',6.060863900000001,{0: {'legs': [{'ref': 1}, {'ref': 11}], 'currency', origins='MVD'|destinations='BUE'|dates='2020-08-24,2020-09-07'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:50:24.786155,'get_token',1.097473000000008,T1RLAQJbDWzKGZmm7UX/joHUyesyKRS5SxC5hlvdgn3TIT7onD, 
+2020-06-25 16:51:01.136295,'get_token',1.1081416999999991,T1RLAQJSH3+vjpeW9n8P+IFHxVgbauAfWBAVZB1ls2EUEEGGY+, 
+2020-06-25 16:51:02.177688,'parse_response',4.990000000049122e-05,No Options Found, <Response [200]>
+2020-06-25 16:51:02.183690,'send_bfm',2.1555006999999993,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:51:07.890262,'get_token',0.6966801999999994,T1RLAQK0lQd3qcr7j/OLthTlZ8ioCBEdVRAUGXTKbK5fVs73q+, 
+2020-06-25 16:51:08.984218,'parse_response',4.3899999997876193e-05,No Options Found, <Response [200]>
+2020-06-25 16:51:08.988220,'send_bfm',1.7951487999999998,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:51:14.685013,'get_token',0.690268200000002,T1RLAQJyUrPQgWUv47mbzzN1/XagQjTCJBC1aeuNZOw/WCJplg, 
+2020-06-25 16:51:15.719201,'parse_response',4.039999999960742e-05,No Options Found, <Response [200]>
+2020-06-25 16:51:15.723224,'send_bfm',1.7294704000000003,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-08-31'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:51:21.424201,'get_token',0.6935293000000016,T1RLAQIOeu2qRLVhTKkEEYEYBsZGpPlq4xB71iI1ohw7+Z1ytm, 
+2020-06-25 16:51:22.454767,'parse_response',4.110000000423497e-05,No Options Found, <Response [200]>
+2020-06-25 16:51:22.460766,'send_bfm',1.7299675999999984,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:51:28.163199,'get_token',0.6948016999999993,T1RLAQJMN+UM1iQA26UJolsZd9yAntIluxCKMNqPlTaz1tSdi8, 
+2020-06-25 16:51:32.420721,'parse_response',0.004682899999998824,{0: {'legs': [{'ref': 1}, {'ref': 9}], 'currency':, <Response [200]>
+2020-06-25 16:51:32.426728,'send_bfm',4.958789199999998,{0: {'legs': [{'ref': 1}, {'ref': 9}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-01'|adt=3|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:51:40.949226,'get_token',1.1123100999999949,T1RLAQJ83CK2nZInBhYTYzUhizxo3GZ2AxC1vBr9ndkjQn+tGd, 
+2020-06-25 16:51:45.085930,'parse_response',0.003695200000002785,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, <Response [200]>
+2020-06-25 16:51:45.090894,'send_bfm',5.254395000000002,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:51:52.754604,'get_token',0.7023197000000039,T1RLAQJBbkbnW1xJPN6w1dF20xeGwiBpSBCVVbFt02zXckyWbn, 
+2020-06-25 16:51:56.871726,'parse_response',0.02888379999998847,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', <Response [200]>
+2020-06-25 16:51:56.884732,'send_bfm',4.840459299999999,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', origins='MVD'|destinations='BUE'|dates='2020-08-24,2020-08-31'|adt=1|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:52:06.645616,'get_token',0.942300000000003,T1RLAQJKZJo3cZsAnowAcszozveY1y0q4RD14GBwCjmjBh+kFo, 
+2020-06-25 16:52:11.396796,'parse_response',0.010568499999990877,{0: {'legs': [{'ref': 1}, {'ref': 11}], 'currency', <Response [200]>
+2020-06-25 16:52:11.403829,'send_bfm',5.700827199999992,{0: {'legs': [{'ref': 1}, {'ref': 11}], 'currency', origins='MVD'|destinations='BUE'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:52:20.561275,'get_token',1.6684576000000106,T1RLAQK2E+XTnJl9/2FsElGgGkFSxK+sLRCwBzCvbkJO217sy9, 
+2020-06-25 16:52:24.815193,'parse_response',0.027538199999995072,{0: {'legs': [{'ref': 8}, {'ref': 9}], 'currency':, <Response [200]>
+2020-06-25 16:52:24.969194,'send_bfm',6.076416600000002,{0: {'legs': [{'ref': 8}, {'ref': 9}], 'currency':, origins='MVD'|destinations='SCL'|dates='2020-07-25,2020-08-01'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:52:33.672181,'get_token',0.7035704000000038,T1RLAQKGi2K3RTdFy3XZFHbXnun0LSqikBCSharok+9BuG58nd, 
+2020-06-25 16:53:12.821487,'get_token',1.1023169,T1RLAQJSEoHezGC3umYabRI4We53AwYKmhCQTvRou/Z3qmzAUX, 
+2020-06-25 16:53:14.277274,'parse_response',6.120000000109371e-05,No Options Found, <Response [200]>
+2020-06-25 16:53:14.281276,'send_bfm',2.5627218999999997,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:53:19.987311,'get_token',0.6998575999999979,T1RLAQKUK2PGmfsEctrJOLJuqu+rd0CGoBCfilax/vrmNjg1qH, 
+2020-06-25 16:53:21.035841,'parse_response',8.79999999980896e-05,No Options Found, <Response [200]>
+2020-06-25 16:53:21.043842,'send_bfm',1.7566507999999992,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:53:26.840259,'get_token',0.7872810000000001,T1RLAQJIo1999mQHkclJQlXtpy3kpBM5CxD+i6ppUBq0sR8cDJ, 
+2020-06-25 16:53:27.893769,'parse_response',4.829999999955703e-05,No Options Found, <Response [200]>
+2020-06-25 16:53:27.898768,'send_bfm',1.8456672999999988,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-08-31'|adt=1|cnn=2|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:53:33.614020,'get_token',0.7003917000000044,T1RLAQLu7B22tgD3CUIEmiuxq64HeSGFShBaOejgioJBhDcaMD, 
+2020-06-25 16:53:34.718451,'parse_response',4.510000000124137e-05,No Options Found, <Response [200]>
+2020-06-25 16:53:34.723449,'send_bfm',1.809647400000003,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=1|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:53:40.443492,'get_token',0.701281299999998,T1RLAQKaCkEjB+Uy0p9fdvoODhf/qq3qLhCebz14k9KFJQMLwp, 
+2020-06-25 16:53:44.352739,'parse_response',0.002030200000000093,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, <Response [200]>
+2020-06-25 16:53:44.357739,'send_bfm',4.6164378,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:53:52.342808,'get_token',1.1084662000000023,T1RLAQJzzyCv8coH/8A1x84g2NdjUBMH5hAuZ1jq2OoGaxUgYW, 
+2020-06-25 16:53:56.221239,'parse_response',0.0059536999999991735,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, <Response [200]>
+2020-06-25 16:53:56.228237,'send_bfm',4.993515099999996,{0: {'legs': [{'ref': 2}, {'ref': 7}], 'currency':, origins='MVD'|destinations='BUE'|dates='2020-07-25,2020-08-08'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:54:04.457175,'get_token',0.8901070000000004,T1RLAQIbU7bwsvhNc198nawk9ehPehByfRD7ut+ryjhyW98usM, 
+2020-06-25 16:54:08.454447,'parse_response',0.00660779999999761,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', <Response [200]>
+2020-06-25 16:54:08.454447,'send_bfm',4.9015270000000015,{0: {'legs': [{'ref': 1}, {'ref': 12}], 'currency', origins='MVD'|destinations='BUE'|dates='2020-08-24,2020-08-31'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:54:23.463708,'get_token',1.1275593999999955,T1RLAQIl1fywiqxePSaZZ9fGzOsn98GK9hB5YXfymjKhSM32JT, 
+2020-06-25 16:54:24.417133,'get_token',0.8742143000000056,T1RLAQJ46Y5IOwoeLEy95GmLL/Ks9Sn65RBeRgVc3TC72tvjqN, 
+2020-06-25 16:54:24.574135,'parse_response',9.150000001056924e-05,No Options Found, <Response [200]>
+2020-06-25 16:54:24.584134,'send_bfm',2.249144599999994,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:54:28.505131,'parse_response',0.007464900000002217,{0: {'legs': [{'ref': 8}, {'ref': 9}], 'currency':, <Response [200]>
+2020-06-25 16:54:28.516130,'send_bfm',4.975516100000007,{0: {'legs': [{'ref': 8}, {'ref': 9}], 'currency':, origins='MVD'|destinations='SCL'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:54:30.972132,'get_token',0.7521543000000008,T1RLAQLuPXLId7pNJ8MxQJf0Xbd0FZ+9zBBJTNJ3VRPx1f1b0q, 
+2020-06-25 16:54:32.352131,'parse_response',7.680000000220844e-05,No Options Found, <Response [200]>
+2020-06-25 16:54:32.361132,'send_bfm',2.1423719999999946,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:55:26.912351,'get_token',1.1335035999999974,T1RLAQJT53Kq2Xpd7eLy8+tYi3Jk5vU2jxBzxbHKHGOXQArtnG, 
+2020-06-25 16:55:27.947345,'parse_response',6.46000000017466e-05,No Options Found, <Response [200]>
+2020-06-25 16:55:27.952347,'send_bfm',2.1747775000000047,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-01'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:55:33.687845,'get_token',0.706858699999998,T1RLAQJXrfZaBrMRdS8DgotM+Djr2zDjBxAcO6O+vpjzKcEZPP, 
+2020-06-25 16:55:34.876213,'parse_response',6.410000000300897e-05,No Options Found, <Response [200]>
+2020-06-25 16:55:34.882211,'send_bfm',1.9015545999999972,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-07-25,2020-08-08'|adt=3|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:55:40.654723,'get_token',0.7547625999999994,T1RLAQJcdWwjK9kBuqkjvXG6DvFqcqwIBBAhprBogbb7GLlJx8, 
+2020-06-25 16:55:42.265345,'parse_response',8.309999999767115e-05,No Options Found, <Response [200]>
+2020-06-25 16:55:42.274345,'send_bfm',2.3748145999999934,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-08-31'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:55:47.970775,'get_token',0.686992900000007,T1RLAQLvGb9pYYIpI61DN7mkpDFtCiUxxxD2FlCfciWH07zBYI, 
+2020-06-25 16:55:49.035720,'parse_response',4.630000000815926e-05,No Options Found, <Response [200]>
+2020-06-25 16:55:49.040724,'send_bfm',1.756772699999999,Error on Searching: 'Exception' object has no attribute 'items', origins='MVD'|destinations='MVD'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:56:13.817215,'get_token',1.213668999999996,T1RLAQLO6Df7HtY4gQf4z8lKDAriV1tFTBDIyF1FvFDGHnKVmN, 
+2020-06-25 16:56:18.358592,'parse_response',0.01770360000000437,{0: {'legs': [{'ref': 1}, {'ref': 11}], 'currency', <Response [200]>
+2020-06-25 16:56:18.366592,'send_bfm',5.762652900000006,{0: {'legs': [{'ref': 1}, {'ref': 11}], 'currency', origins='MVD'|destinations='BUE'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:56:27.513678,'get_token',0.7072570999999925,T1RLAQJlhtQlNNqoArRrcTa+JyJQdgRfZRAulD1UDS4GsIARqo, 
+2020-06-25 16:56:32.232285,'parse_response',0.004625799999999458,{0: {'legs': [{'ref': 8}, {'ref': 9}], 'currency':, <Response [200]>
+2020-06-25 16:56:32.240288,'send_bfm',5.4337321,{0: {'legs': [{'ref': 8}, {'ref': 9}], 'currency':, origins='MVD'|destinations='SCL'|dates='2020-07-25,2020-08-01'|adt=1|cnn=1|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:56:40.119073,'get_token',0.7474057000000016,T1RLAQINQHHh2yvdE6aK1Lvb3FJ199nloRCfK24nHboH3xnL1K, 
+2020-06-25 16:56:49.960308,'parse_response',0.011839500000007774,{0: {'legs': [{'ref': 13}, {'ref': 22}], 'currency, <Response [200]>
+2020-06-25 16:56:49.969306,'send_bfm',10.597412699999992,{0: {'legs': [{'ref': 13}, {'ref': 22}], 'currency, origins='MVD'|destinations='SCL'|dates='2020-07-25,2020-08-08'|adt=2|cnn=0|inf=1|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:56:58.355294,'get_token',1.1318358999999987,T1RLAQJVAYg7czRvhHvWJBbUu2BKuxS0sRAbWZpmmydqEPYow6, 
+2020-06-25 16:57:08.223186,'parse_response',0.06513389999997798,{0: {'legs': [{'ref': 26}, {'ref': 32}], 'currency, <Response [200]>
+2020-06-25 16:57:08.238186,'send_bfm',11.014164999999991,{0: {'legs': [{'ref': 26}, {'ref': 32}], 'currency, origins='MVD'|destinations='SCL'|dates='2020-08-24,2020-08-31'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:57:16.475863,'get_token',0.7079699999999889,T1RLAQI08XL6TREeKyiWhCCUHSFTKZtQvBAF6TrwtvsKVmTiWQ, 
+2020-06-25 16:57:26.487483,'parse_response',0.019729200000000446,{0: {'legs': [{'ref': 21}, {'ref': 14}], 'currency, <Response [200]>
+2020-06-25 16:57:26.498451,'send_bfm',10.73013880000002,{0: {'legs': [{'ref': 21}, {'ref': 14}], 'currency, origins='MVD'|destinations='SCL'|dates='2020-08-24,2020-09-07'|adt=1|cnn=2|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:57:34.784404,'get_token',1.139243499999992,T1RLAQIi+iP2iYBYdxX6yaN5V3EADCfrtRBug0c6hKx/w2MFt9, 
+2020-06-25 16:57:40.874344,'parse_response',0.02919739999998683,{0: {'legs': [{'ref': 13}, {'ref': 68}], 'currency, <Response [200]>
+2020-06-25 16:57:40.886346,'send_bfm',7.241900799999996,{0: {'legs': [{'ref': 13}, {'ref': 68}], 'currency, origins='MVD'|destinations='MIA'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:57:48.748239,'get_token',0.6880696000000057,T1RLAQLGzZzmMOgFj2WiN85J0LszzmcrtRA1A57con+yac80pV, 
+2020-06-25 16:57:54.134160,'parse_response',0.03437980000001062,{0: {'legs': [{'ref': 13}, {'ref': 68}], 'currency, <Response [200]>
+2020-06-25 16:57:54.146159,'send_bfm',6.0859734,{0: {'legs': [{'ref': 13}, {'ref': 68}], 'currency, origins='MVD'|destinations='MIA'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:58:01.940951,'get_token',0.6987048000000016,T1RLAQIXXay9s1Y9bS7wVcD9mSUzXOtd5xCPqebCI+njt/5VRQ, 
+2020-06-25 16:58:06.175885,'parse_response',0.04430059999998548,'baggageInformation', <Response [200]>
+2020-06-25 16:58:06.180886,'send_bfm',4.939019299999984,Error on Searching: 'KeyError' object has no attribute 'items', origins='MVD'|destinations='MIA'|dates='2020-08-24,2020-08-31'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:58:12.026598,'get_token',0.8318895999999825,T1RLAQIswWT8rVSbhpm1RfZjtftLEAVU2RA+EvzRCwGTRcM14/, 
+2020-06-25 16:58:16.927527,'parse_response',0.017479399999984935,'baggageInformation', <Response [200]>
+2020-06-25 16:58:16.932496,'send_bfm',5.737575300000003,Error on Searching: 'KeyError' object has no attribute 'items', origins='MVD'|destinations='MIA'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:58:22.631956,'get_token',0.6837112999999988,T1RLAQJoFE1XMWeKZs8nyTMp0XSLFVVWXxBb6RITRkwaevjun3, 
+2020-06-25 16:58:32.167930,'parse_response',0.017166300000013734,list index out of range, <Response [200]>
+2020-06-25 16:58:32.173931,'send_bfm',10.2256931,Error on Searching: 'IndexError' object has no attribute 'items', origins='MVD'|destinations='NYC'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:58:37.889964,'get_token',0.6968027000000063,T1RLAQICymLzAD1IonEBwQ13U28dY1tMpRDHwiVHYAMXkMofjo, 
+2020-06-25 16:58:47.450932,'parse_response',0.016828500000002578,list index out of range, <Response [200]>
+2020-06-25 16:58:47.457927,'send_bfm',10.264531499999975,Error on Searching: 'IndexError' object has no attribute 'items', origins='MVD'|destinations='NYC'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:58:53.567000,'get_token',1.0944271999999842,T1RLAQK469+VQUCvO2zviN9LedKowH562xDjbUtvXB6oL5m93w, 
+2020-06-25 16:59:02.448321,'parse_response',0.00972070000000258,list index out of range, <Response [200]>
+2020-06-25 16:59:02.453320,'send_bfm',9.980688499999985,Error on Searching: 'IndexError' object has no attribute 'items', origins='MVD'|destinations='NYC'|dates='2020-08-24,2020-08-31'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:59:08.144748,'get_token',0.6787941999999703,T1RLAQLwOhRiLt7zP3RU6y9ksgcQTPguVxD3crFc4BLfowNN3P, 
+2020-06-25 16:59:18.005457,'parse_response',0.042834499999969466,list index out of range, <Response [200]>
+2020-06-25 16:59:18.010463,'send_bfm',10.544081000000006,Error on Searching: 'IndexError' object has no attribute 'items', origins='MVD'|destinations='NYC'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=1|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:59:24.154025,'get_token',1.1275481000000127,T1RLAQIrOmmmEXltD1wg4oanUTYj91sJvhBBkMcCQLc7crnjzh, 
+2020-06-25 16:59:34.440310,'parse_response',0.023224299999981213,{0: {'legs': [{'ref': 34}, {'ref': 29}], 'currency, <Response [200]>
+2020-06-25 16:59:34.450306,'send_bfm',11.423535700000002,{0: {'legs': [{'ref': 34}, {'ref': 29}], 'currency, origins='MVD'|destinations='SYD'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:59:42.177722,'get_token',0.8013470000000211,T1RLAQJGy8HDBgsXAk/Xc8LldPDy+LlFvxD8ZpUKL5N/OGTggz, 
+2020-06-25 16:59:49.018932,'parse_response',0.011370800000008785,{0: {'legs': [{'ref': 27}, {'ref': 16}], 'currency, <Response [200]>
+2020-06-25 16:59:49.025935,'send_bfm',7.650030200000003,{0: {'legs': [{'ref': 27}, {'ref': 16}], 'currency, origins='MVD'|destinations='SYD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 16:59:57.703007,'get_token',1.0959374000000253,T1RLAQIdYKnpy6XyBOHRg7x2NFxydFTp2xDCMKNVt6ZB8CCizn, 
+2020-06-25 17:00:04.966912,'parse_response',0.030670999999983906,{0: {'legs': [{'ref': 26}, {'ref': 37}], 'currency, <Response [200]>
+2020-06-25 17:00:04.979937,'send_bfm',8.372318199999995,{0: {'legs': [{'ref': 26}, {'ref': 37}], 'currency, origins='MVD'|destinations='SYD'|dates='2020-08-24,2020-08-31'|adt=1|cnn=1|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:00:12.627332,'get_token',0.6945045000000505,T1RLAQJgsW210FttmWdWlhOka85FaDmE6hAZ5SBjq0NMg/2mON, 
+2020-06-25 17:00:17.382757,'parse_response',0.043897000000015396,{0: {'legs': [{'ref': 24}, {'ref': 25}], 'currency, <Response [200]>
+2020-06-25 17:00:17.394723,'send_bfm',5.461447599999985,{0: {'legs': [{'ref': 24}, {'ref': 25}], 'currency, origins='MVD'|destinations='SYD'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:00:25.018303,'get_token',0.6827013999999849,T1RLAQKJddke3TdRzGQo1HSmyrpsTuj3UxAxCIx8b4UmSvAX31, 
+2020-06-25 17:00:30.364763,'parse_response',0.038321599999960654,{0: {'legs': [{'ref': 53}, {'ref': 67}], 'currency, <Response [200]>
+2020-06-25 17:00:30.378761,'send_bfm',6.043229399999973,{0: {'legs': [{'ref': 53}, {'ref': 67}], 'currency, origins='MVD'|destinations='MAD'|dates='2020-07-25,2020-08-01'|adt=1|cnn=1|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:00:39.464985,'get_token',1.1167247000000202,T1RLAQJXFNQHzkIsyYsN9EZyJZmgcs0YpxABG5YffJQbKhT59L, 
+2020-06-25 17:00:44.035660,'parse_response',0.03282710000001998,{0: {'legs': [{'ref': 18}, {'ref': 88}], 'currency, <Response [200]>
+2020-06-25 17:00:44.048660,'send_bfm',5.700628300000005,{0: {'legs': [{'ref': 18}, {'ref': 88}], 'currency, origins='MVD'|destinations='MAD'|dates='2020-07-25,2020-08-08'|adt=1|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:00:52.490283,'get_token',0.689870400000018,T1RLAQLg4EFXNw7Pr/FqTIgduY13kSzrJxDwivhMNQ/xzgN/gS, 
+2020-06-25 17:00:59.339349,'parse_response',0.10958080000000336,{0: {'legs': [{'ref': 35}, {'ref': 51}], 'currency, <Response [200]>
+2020-06-25 17:00:59.369348,'send_bfm',7.555904799999951,{0: {'legs': [{'ref': 35}, {'ref': 51}], 'currency, origins='MVD'|destinations='MAD'|dates='2020-08-24,2020-08-31'|adt=1|cnn=2|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:01:08.142884,'get_token',0.932511399999953,T1RLAQKHpBoEr4zWAMFI5vvstbiuZK1dMhC9WQbJ63O9QH1ESv, 
+2020-06-25 17:01:13.190657,'parse_response',0.0613432999999759,{0: {'legs': [{'ref': 32}, {'ref': 50}], 'currency, <Response [200]>
+2020-06-25 17:01:13.209656,'send_bfm',5.998452899999961,{0: {'legs': [{'ref': 32}, {'ref': 50}], 'currency, origins='MVD'|destinations='MAD'|dates='2020-08-24,2020-09-07'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:01:21.828014,'get_token',1.1201524999999606,T1RLAQICNg32H+ExqaifpVGQNsSvFnPvzRBlfW66ejfRmbRUkC, 
+2020-06-25 17:01:26.591141,'parse_response',0.05594729999995707,{0: {'legs': [{'ref': 55}, {'ref': 35}], 'currency, <Response [200]>
+2020-06-25 17:01:26.615140,'send_bfm',5.907336399999963,{0: {'legs': [{'ref': 55}, {'ref': 35}], 'currency, origins='MVD'|destinations='MEX'|dates='2020-07-25,2020-08-01'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:01:35.009136,'get_token',0.6959862999999586,T1RLAQJ6Ty9ruqbseE1FjPQ7seIG86Q2LxDqm2ZRfgLIFRRSE8, 
+2020-06-25 17:01:43.999462,'parse_response',0.045230800000013005,{0: {'legs': [{'ref': 10}, {'ref': 31}], 'currency, <Response [200]>
+2020-06-25 17:01:44.008462,'send_bfm',9.695899199999985,{0: {'legs': [{'ref': 10}, {'ref': 31}], 'currency, origins='MVD'|destinations='MEX'|dates='2020-07-25,2020-08-08'|adt=2|cnn=0|inf=2|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:01:52.011915,'get_token',1.1136872000000153,T1RLAQLRDCzcisjlW5L9UVelRFbbRfg1BRBXkH58pDfRTMbHNb, 
+2020-06-25 17:01:57.193754,'parse_response',0.02431339999998272,{0: {'legs': [{'ref': 27}, {'ref': 9}], 'currency', <Response [200]>
+2020-06-25 17:01:57.202755,'send_bfm',6.3045329000000265,{0: {'legs': [{'ref': 27}, {'ref': 9}], 'currency', origins='MVD'|destinations='MEX'|dates='2020-08-24,2020-08-31'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'

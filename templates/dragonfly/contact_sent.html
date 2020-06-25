@@ -1,0 +1,29 @@
+{% extends 'dragonfly/base.html' %}
+{% load static %}
+{% block title %}
+    <title>Contact Form</title>
+{% endblock %}
+{% load extra_tags %}
+{% block content %}
+
+<div class="container">
+    <div class="sgv_divider"></div>
+
+<div class="alert alert-primary" role="alert">
+  Contact sent. Redirecting to index.
+
+    Go back to index <a href="{% url 'index' %}">here</a>
+
+</div>
+
+
+</div>
+<script>
+    window.setTimeout(function(){
+
+        // Move to a new location or you can do something else
+        window.location.href = "{% url 'index' %}";
+
+    }, 1000);
+</script>
+{% endblock %}

@@ -1,14 +1,17 @@
-
+{% load static %}
 <div class="container  search-box">
         <div class="row">
            <div class="col">
+
+
+                   <div class="form-row">
+                       <img src="{% static 'images/dragonfly/plane_ico.svg' %}" alt="" style="height:25px;height:25px">
+                   </div><div class="sgv_divider"></div>
                <form method="GET" action="{% url 'search' %}" id="search-form">
                    {% csrf_token %}
-                   <div class="sgv_divider"></div>
 
-
-                   <div class="form-row" >
-                       <div class="col" id="onds"></div>
+                   <div class="form-row" style="align-items: baseline;">
+                       <div class="col" id="onds" ></div>
                        <div class="col-2" ><button id="submit-btn" type="submit" class="btn btn-warning btn-lg">Search</button></div>
                    </div>
                    <div class="form-row">
@@ -18,6 +21,7 @@
                        </div>
                    </div>
                    <div class="form-row">
+
                        <div class="form-group col-md-4">
                            <div class="row">
                                <div class="col-3">
@@ -38,6 +42,17 @@
                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
                           </div>
                        </div>
+                       <div class="form-group col-md-4"></div>
+                       <div class="form-group col-md-4">
+                            <div class="row">
+                                <div class="col-12" style="top: 125px;text-align: end;">
+                                    <img src="{% static 'images/dragonfly/dragonfly_ico.svg' %}" alt="" style="height:25px;height:25px">
+                                    Dragonfly
+                                </div>
+                            </div>
+
+                       </div>
+
                    </div>
                     <div class="form-row">
                        <div class="btn-group btn-group-toggle" data-toggle="buttons">

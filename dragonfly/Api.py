@@ -1,6 +1,9 @@
-import base64, json, os, requests
-from .Handyman import add_days_to_date, function_log, translate_iata
+import base64, functools, json, os, requests, time
+try: import numpy as np
+except: pass
 
+from .Handyman import add_days_to_date, function_log, translate_iata
+DEBUG = True
 
 def bfm_log(**kwargs):
     bfm_log = open('../dragonfly/static/resources/ota/logs/bfm_log.log', 'a')
@@ -9,7 +12,7 @@ def bfm_log(**kwargs):
     bfm_log.close()
 
 
-DEBUG = False
+
 
 
 @function_log
@@ -31,7 +34,6 @@ def parse_response(http_response):
     baggage_allowance_descriptions = response['baggageAllowanceDescs']
 
     for itin_group in response['itineraryGroups']:
-        if DEBUG: print('itin_group')
         departure_dates = []
         arrival_dates = []
         for leg_desc in itin_group['groupDescription']['legDescriptions']:
@@ -39,7 +41,7 @@ def parse_response(http_response):
             arrival_dates.append('PENDING***')
 
         for itin in itin_group['itineraries']:
-            if DEBUG: print('itin')
+
             itinerary = {'legs': itin['legs']}
             itineraries[itin['id'] - 1] = itinerary  # to start in 0
 
@@ -83,8 +85,11 @@ def parse_response(http_response):
                                          })
 
 
-            passenger_count = len(pricing_info)
-            seat_count = len([p for p in pricing_info if p['ptc'] != 'INF'])
+            passenger_count, seat_count = 0, 0
+            for pi in pricing_info:
+                passenger_count += pi['pax_count']
+                if pi['ptc'] != 'INF': seat_count += pi['pax_count']
+
             itinerary['bags'] = baggage_allowance
             itinerary['pricing_info'] = pricing_info
             itinerary['passenger_count'] = passenger_count
@@ -192,7 +197,8 @@ def get_persona(passengers={'ADT': 1}):
 
 # @log_search
 @function_log
-def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10):
+def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10, session_id=''):
+    if DEBUG: print (f'**********SENDING BFM: {session_id}')
     sep = ','
     standard_time = '12:00:00'
 
@@ -204,7 +210,7 @@ def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10):
     if dates[-1] == ',': dates = dates[:-1]
     origins, destinations, dates = origins.split(sep), destinations.split(sep), dates.split(sep)
 
-    print(f'Doing BFM for: {origins, destinations, dates}')
+    if DEBUG: print(f'Doing BFM for: {origins, destinations, dates}')
     payload['OTA_AirLowFareSearchRQ']['OriginDestinationInformation'] = []
     for i, _ in enumerate(origins):
         ond = {'OriginLocation': {'LocationCode': origins[i]},
@@ -285,3 +291,11 @@ def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10):
         bfm_log(origins=origins, destinations=destinations, dates=dates, options_limit=options_limit,
                 status=response.status_code,
                 business_error='')
+
+
+
+
+#TODO:
+@function_log
+def book(session_id='') -> str:
+    return np.random.choice(['success', 'price_jump', 'other'], p=[.6, .2, .1])

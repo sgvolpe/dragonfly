@@ -1,0 +1,26 @@
+{% extends 'dragonfly/base.html' %}
+{% load static %}
+{% load extra_tags %}
+
+{% block title %}
+    <title>Web Stats</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+<div class="row">{{request}}</div>
+<div class="row">{{request.COOKIES}}</div>
+<div class="row">{{request.COOKIES}}</div>
+<div class="row">{{request.cache.GET}}</div>
+<div class="row">{{request.cache.POST}}</div>
+<div class="row"> Reservations: {{reservation_count}}</div>
+<div class="row">Searches: {{search_count}}</div>
+<div class="row">Searches: {{conversion}}</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -19,6 +19,9 @@ urlpatterns = [
     path('see_itinerary/<int:pk>', views.see_itinerary, name='see_itinerary'),
     path('return_something', views.return_something, name='return_something'),
     path('search_details/<int:pk>/', views.search_details.as_view(), name='search_details'),
+    path('contact_form', views.contact_form, name='contact_form'),
+    path('send_contact_form', views.send_contact_form, name='send_contact_form'),
+
 
     path('get_airports/<str:text>', views.get_airports, name='get_airports'),
 
@@ -27,6 +30,9 @@ urlpatterns = [
     path('user_login', views.user_login, name='user_login'),
     path('user_logout', views.user_logout, name='user_logout'),
     path('user_register', views.user_register, name='user_register'),
+
+
+    path('site_statistics', views.site_statistics, name='site_statistics'),
 
 
 

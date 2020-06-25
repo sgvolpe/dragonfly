@@ -1,4 +1,10 @@
-import datetime, functools, os, requests, time
+import datetime, functools, json, os, requests, smtplib, time
+
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 import pandas as pd
 
 
@@ -69,11 +75,28 @@ def function_log(func):
     @functools.wraps(func)
     def wrapper_timer(*args, **kwargs):
         start_time = time.perf_counter()  # 1
-        value = func(*args, **kwargs)
-        end_time = time.perf_counter()  # 2
-        run_time = end_time - start_time  # 3
-        log(log_f_folder='LOGS', log_f_name='function_log.txt',
-            to_write=f"Finished {func.__name__!r} in {run_time} secs|")
+        try:
+
+            value = func(*args, **kwargs)
+
+            end_time = time.perf_counter()  # 2
+            run_time = end_time - start_time  # 3
+            args_repr = [repr(a) for a in args]  # 1
+            kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]  # 2
+            signature = "|".join(args_repr + kwargs_repr)  # 3
+            log(log_f_folder='LOGS', log_f_name='function_log.txt',
+                to_write=f"{datetime.datetime.now()},{func.__name__!r},{run_time},{str(value)[:50]}, {signature}")
+        except Exception as e:
+            end_time = time.perf_counter()  # 2
+            run_time = end_time - start_time  # 3
+            args_repr = [repr(a) for a in args]  # 1
+            kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]  # 2
+            signature = "|".join(args_repr + kwargs_repr)  # 3
+            log(log_f_folder='LOGS', log_f_name='function_log.txt',
+                to_write=f"{datetime.datetime.now()},{func.__name__!r},{run_time},{str(e)}, {signature}")
+            return e
+
+
 
         return value
 
@@ -157,3 +180,48 @@ def download_airline_icons(base_url):
 
     for cxr in cxrs:
         save_cxr(cxr)
+
+def get_credentials(what_for, creds_path=os.path.join('..', 'LOCAL', 'credentials.txt')):
+
+
+    with open(creds_path) as json_file:
+
+        json_creds = json.load(json_file, encoding='cp1252')
+
+    json_file.close()
+    return json_creds[what_for]
+
+
+def send_email(email_from='sgvolpe1@gmail.com', email_to='sgvolpe1@gmail.com', email_subject="HTML Message",
+               email_body="""<html><body><h1>Test Email</h1></body></html>""", attachments=[]):
+    # Treat Message
+    message = MIMEMultipart()
+    message['From'] = email_from
+    message['To'] = email_to
+    message['Subject'] = email_subject
+    msg1 = MIMEText(email_body, 'html')
+    message.attach(msg1)
+
+    # Treat Attachments
+    for file_name in attachments:
+        openfile = open(file_name, 'rb')
+        mimref = MIMEBase('application', 'octet_stream')
+        mimref.set_payload((openfile.read()))
+        encoders.encode_base64(mimref)
+        mimref.add_header('Content-Disposition', f'openfile;filename={file_name}')
+        message.attach(mimref)
+
+    # Treat Connection
+    creds = get_credentials(what_for='email')
+    host, port, username, password = creds['server'], creds['port'], creds['username'], creds['password']
+    connection = smtplib.SMTP(host, port)
+    connection.ehlo()
+    connection.starttls()
+
+    connection.login(username, password)
+    connection.sendmail(email_from, email_to, message.as_string())
+    connection.quit()
+
+
+# send_email( attachments=['../Resources/test.txt'])
+

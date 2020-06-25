@@ -12,23 +12,34 @@
 
                 {% for id, passenger in passengers.items %}
               <h5>Passenger {{id}} - {{passenger.ptc}}</h5>
-                 <div class="form-group">
+              <div class="row">
+                 <div class="form-group col-6">
                      <label for="name{{id}}">Passenger Name</label>
                      <input type="text"  name="name{{id}}" class="form-control name" id="name{{id}}" aria-describedby="name{{id}}Help"
-                            placeholder="Enter Passenger Name" value="{{passenger.name}}">
+                            placeholder="Enter Passenger Name" value="{{passenger.name}}" required>
                      <small id="name{{id}}Help" class="form-text text-muted"></small>
                  </div>
-              <div class="form-group">
+              <div class="form-group col-6">
                      <label for="name{{id}}">Passenger Last Name</label>
                      <input type="text"  name="surname{{id}}" class="form-control surname" id="surname{{id}}" aria-describedby="surname{{id}}Help"
-                            placeholder="Enter Passenger Surname" value="{{passenger.surname}}">
+                            placeholder="Enter Passenger Surname" value="{{passenger.surname}}" required>
                      <small id="surname{{id}}Help" class="form-text text-muted"></small>
                  </div>
-                 <div class="form-group">
+                 <div class="form-group col-6">
                      <label for="phone{{id}}">Phone Number</label>
-                     <input type="text" name="phone{{id}}" class="form-control phone" id="phone{{id}}" aria-describedby="phone{{id}}Help" placeholder="Enter Passenger Phone Number" value="{{passenger.phone}}">
+                     <input type="text" name="phone{{id}}" class="form-control phone" id="phone{{id}}"
+                            aria-describedby="phone{{id}}Help" placeholder="Enter Passenger Phone Number" value="{{passenger.phone}}" required>
                      <small id="phone{{id}}Help" class="form-text text-muted"></small>
                  </div>
+                  <div class="form-group col-6">
+                     <label for="email{{id}}">eMail</label>
+                     <input type="email" name="email{{id}}" class="form-control phone" id="email{{id}}"
+                            ria-describedby="email{{id}}Help" placeholder="Enter Passenger email address"
+                            value="{{passenger.email}}" required>
+                     <small id="email{{id}}Help" class="form-text text-muted"></small>
+                 </div>
+                  <hr>
+              </div>
               {% endfor %}
               {% if checkout == 'No' %}
                   <script> $(document).ready(function(){

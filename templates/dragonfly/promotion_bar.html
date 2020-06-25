@@ -1,11 +1,17 @@
 {% load extra_tags %}
+
 <div class="col-sm-4" style="margin-bottom: 1.5rem;
     text-align: center;">
-    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-    <h4><a href="{% url 'see_itinerary' pk=promo.pk %}">{{promo.itinerary_origin|decode_name}} to {{promo.itinerary_destination|decode_name}}</h4> <h4><smal>from {{promo.currency}}{{promo.total_price}}</smal></h4></a>
+    <img class="rounded-circle" src="{{promo.itinerary_destination|get_image}}" alt="Generic placeholder image" width="140" height="140">
+
+    <a href="{% url 'see_itinerary' pk=promo.pk %}">
+        <h4>
+            {{promo.itinerary_origin|decode_name}} to {{promo.itinerary_destination|decode_name}}
+    </h4> <h4><smal>from {{promo.currency}}{{promo.total_price}}</smal></h4></a>
     <p>{{promo|marketing_text}}</p>
     <p><a class="btn btn-secondary" href="{% url 'see_itinerary' pk=promo.pk %}" role="button">View details »</a></p>
 </div>
 
 
 
+<!-- data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==-->

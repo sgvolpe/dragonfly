@@ -1,4 +1,4 @@
-import datetime, json
+import datetime, json, os
 from django import template
 from django.shortcuts import render
 
@@ -78,6 +78,23 @@ def decode_name(code: str) -> str:
     try: return Handyman.decode_city(code)
     except: return code
 
+DEBUG = True
+@register.filter(name='get_image')
+def get_image(code: str) -> str:
+    if DEBUG:
+        print (f'{code}.jpg' )
+        print (os.listdir('static/images/dragonfly/cities'))
+    if f'{code}.jpg' in os.listdir('static/images/dragonfly/cities'):
+        return f'static/images/dragonfly/cities/{code}.jpg'
+
+    message = f'{code}.jpg not Found'
+    email_body = f'<html><body><h1> Worth Check: get_image not found </h1><h4>{message}</h4></body></html>'
+
+    Handyman.send_email(email_to='sgvolpe1@gmail.com', email_from='', email_body=email_body,
+                        email_subject=f'Worth Check: get_image {code}.jpg not Found', attachments=[])
+    return f'static/images/dragonfly/cities/default.jpg'
+
+    return 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='
 
 
 @register.simple_tag

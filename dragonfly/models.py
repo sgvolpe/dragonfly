@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.forms.models import model_to_dict
 
+
+DEBUG = True
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200, default='')
@@ -187,14 +189,14 @@ class Reservation(models.Model):
     itinerary_id = models.ForeignKey(Itinerary, on_delete=models.PROTECT, null=True)
 
     def get_passengers(self):
-        Passenger.objects.filter(reservation_id=self.pk)
+        if DEBUG: print('*** Getting Passengers')
+        return Passenger.objects.filter(reservation_id=self)
 
     def add_passenger(self, passenger):
+        if DEBUG: print ('*** Adding Passenger')
         passenger.reservation_id = self
         passenger.save()
 
-    def get_passengers(self):
-        return Passenger.objects.filter(reservation_id=self)
 
     def get_absolute_url(self):
         return f"reservation_details/{str(self.pk)}"
