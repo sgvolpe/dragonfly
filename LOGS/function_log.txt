@@ -323,3 +323,5 @@ datetime,function_name,process_time (s),result,signature,
 2020-06-25 17:01:52.011915,'get_token',1.1136872000000153,T1RLAQLRDCzcisjlW5L9UVelRFbbRfg1BRBXkH58pDfRTMbHNb, 
 2020-06-25 17:01:57.193754,'parse_response',0.02431339999998272,{0: {'legs': [{'ref': 27}, {'ref': 9}], 'currency', <Response [200]>
 2020-06-25 17:01:57.202755,'send_bfm',6.3045329000000265,{0: {'legs': [{'ref': 27}, {'ref': 9}], 'currency', origins='MVD'|destinations='MEX'|dates='2020-08-24,2020-08-31'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 17:05:09.915927,'get_promotions',0.054415699999999845,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 17:05:11.939129,'index',2.0773428000000003,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
