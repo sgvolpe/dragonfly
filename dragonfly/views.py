@@ -72,6 +72,7 @@ def notify_email(func):
 
         Handyman.send_email(email_to='sgvolpe1@gmail.com', email_from='', email_body=f"{datetime.datetime.now()},{func.__name__!r},{str(value)[:50]}, {signature}",
                         email_subject=f'SEARCH_RECEIVED: {signature}', attachments=[])
+        return value
     return wrapper
 
 @notify_email

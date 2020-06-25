@@ -86,6 +86,7 @@ def function_log(func):
             signature = "|".join(args_repr + kwargs_repr)  # 3
             log(log_f_folder='LOGS', log_f_name='function_log.txt',
                 to_write=f"{datetime.datetime.now()},{func.__name__!r},{run_time},{str(value)[:50]}, {signature}")
+            return value
         except Exception as e:
             end_time = time.perf_counter()  # 2
             run_time = end_time - start_time  # 3
@@ -96,9 +97,6 @@ def function_log(func):
                 to_write=f"{datetime.datetime.now()},{func.__name__!r},{run_time},{str(e)}, {signature}")
             return e
 
-
-
-        return value
 
     return wrapper_timer
 
@@ -223,7 +221,9 @@ def send_email(email_from='sgvolpe1@gmail.com', email_to='sgvolpe1@gmail.com', e
         connection.login(username, password)
         connection.sendmail(email_from, email_to, message.as_string())
         connection.quit()
-    except Exception: pass
+
+    except Exception as e:
+        print (f'Couldnt email :{str(e)}')
 
 # send_email( attachments=['../Resources/test.txt'])
 

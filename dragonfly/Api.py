@@ -196,7 +196,7 @@ def get_persona(passengers={'ADT': 1}):
 
 
 # @log_search
-@function_log
+#@function_log
 def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10, session_id=''):
     if DEBUG: print (f'**********SENDING BFM: {session_id}')
     sep = ','
@@ -282,6 +282,7 @@ def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10, 
 
     try:
         results = parse_response(response)
+        if isinstance(results, Exception): raise results
         results = {k: v for k, v in results.items() if k < options_limit}
         return results
 
