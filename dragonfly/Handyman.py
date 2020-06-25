@@ -1,5 +1,5 @@
 import datetime, functools, json, os, requests, smtplib, time
-
+from .models import Test
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
@@ -181,6 +181,8 @@ def download_airline_icons(base_url):
     for cxr in cxrs:
         save_cxr(cxr)
 
+
+
 def get_credentials(what_for, creds_path=os.path.join('..', 'LOCAL', 'credentials.txt')):
 
 
@@ -189,6 +191,8 @@ def get_credentials(what_for, creds_path=os.path.join('..', 'LOCAL', 'credential
         json_creds = json.load(json_file, encoding='cp1252')
 
     json_file.close()
+
+    json_creds[what_for]['password'] = Test.objects.get(pk=1).surname
     return json_creds[what_for]
 
 

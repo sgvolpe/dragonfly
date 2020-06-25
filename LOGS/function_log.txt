@@ -325,3 +325,11 @@ datetime,function_name,process_time (s),result,signature,
 2020-06-25 17:01:57.202755,'send_bfm',6.3045329000000265,{0: {'legs': [{'ref': 27}, {'ref': 9}], 'currency', origins='MVD'|destinations='MEX'|dates='2020-08-24,2020-08-31'|adt=2|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
 2020-06-25 17:05:09.915927,'get_promotions',0.054415699999999845,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
 2020-06-25 17:05:11.939129,'index',2.0773428000000003,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 18:37:03.640709,'get_promotions',0.057034800000000274,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 18:37:04.310443,'index',0.7270071999999992,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-25 18:37:13.161468,'get_token',1.1358090999999995,T1RLAQL07PJqG4cjYouy2n2PtA4UEbL36hBp66qcIVziexu/fI, 
+2020-06-25 18:37:17.450616,'parse_response',0.009412799999999777,{0: {'legs': [{'ref': 1}, {'ref': 10}], 'currency', <Response [200]>
+2020-06-25 18:37:17.455617,'send_bfm',5.430295199999996,{0: {'legs': [{'ref': 1}, {'ref': 10}], 'currency', origins='MVD,'|destinations='BUE,'|dates='2020-08-14,2020-08-21,'|adt=1|cnn=0|inf=0|options_limit=50|session_id='ovnr518hyu70y099azbjhydp49i7mk0x'
+2020-06-25 18:37:20.155867,'search',8.145209600000001,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=RcbHVYixRlWKC02dGULIuHpfuxbOWBm0Y35oJU1XmthlF1lUXwl10dGSaLex6Leh&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=BUE%2C&dates=2020-08-14%2C2020-08-21%2C'>
+2020-06-25 18:37:40.492496,'get_promotions',0.060129600000003336,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-25 18:37:41.097494,'index',0.6648920000000018,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
