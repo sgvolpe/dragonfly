@@ -1,11 +1,12 @@
 __author__ = 'SGV'
 
 from django.contrib import admin
-from .models import (Itinerary, Passenger, Reservation, Search)
+from .models import (Itinerary, Passenger, Reservation, Search, Test)
 
 
 admin.site.register(Search)
 admin.site.register(Itinerary)
 admin.site.register(Passenger)
 admin.site.register(Reservation)
+admin.site.register(Test)
 

@@ -218,3 +218,8 @@ class Passenger(models.Model):
     def add_to_reservation(self, reservation):
         self.reservation_id = reservation
         self.save()
+
+
+class Test(models.Model):
+    name = models.CharField(max_length=200)
+    surname = models.CharField(max_length=200)
