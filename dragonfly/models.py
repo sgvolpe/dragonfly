@@ -210,6 +210,7 @@ class Passenger(models.Model):
     name = models.CharField(max_length=200)
     surname = models.CharField(max_length=200)
     phone = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
     ptc = models.CharField(max_length=3, default='ADT')
     profile_id = models.CharField(max_length=2, default='0') #TODO
     reservation_id = models.ForeignKey(Reservation, on_delete=models.PROTECT, null=True)
