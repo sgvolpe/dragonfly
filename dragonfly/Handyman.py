@@ -186,46 +186,44 @@ def download_airline_icons(base_url):
 def get_credentials(what_for, creds_path=os.path.join('..', 'LOCAL', 'credentials.txt')):
 
 
-    with open(creds_path) as json_file:
+    #with open(creds_path) as json_file:         json_creds = json.load(json_file, encoding='cp1252')
+    #json_file.close()
 
-        json_creds = json.load(json_file, encoding='cp1252')
+    return Test.objects.get(pk=1).surname
 
-    json_file.close()
-
-    json_creds[what_for]['password'] = Test.objects.get(pk=1).surname
-    return json_creds[what_for]
 
 
 def send_email(email_from='sgvolpe1@gmail.com', email_to='sgvolpe1@gmail.com', email_subject="HTML Message",
                email_body="""<html><body><h1>Test Email</h1></body></html>""", attachments=[]):
-    # Treat Message
-    message = MIMEMultipart()
-    message['From'] = email_from
-    message['To'] = email_to
-    message['Subject'] = email_subject
-    msg1 = MIMEText(email_body, 'html')
-    message.attach(msg1)
+    try:
+        # Treat Message
+        message = MIMEMultipart()
+        message['From'] = email_from
+        message['To'] = email_to
+        message['Subject'] = email_subject
+        msg1 = MIMEText(email_body, 'html')
+        message.attach(msg1)
 
-    # Treat Attachments
-    for file_name in attachments:
-        openfile = open(file_name, 'rb')
-        mimref = MIMEBase('application', 'octet_stream')
-        mimref.set_payload((openfile.read()))
-        encoders.encode_base64(mimref)
-        mimref.add_header('Content-Disposition', f'openfile;filename={file_name}')
-        message.attach(mimref)
+        # Treat Attachments
+        for file_name in attachments:
+            openfile = open(file_name, 'rb')
+            mimref = MIMEBase('application', 'octet_stream')
+            mimref.set_payload((openfile.read()))
+            encoders.encode_base64(mimref)
+            mimref.add_header('Content-Disposition', f'openfile;filename={file_name}')
+            message.attach(mimref)
 
-    # Treat Connection
-    creds = get_credentials(what_for='email')
-    host, port, username, password = creds['server'], creds['port'], creds['username'], creds['password']
-    connection = smtplib.SMTP(host, port)
-    connection.ehlo()
-    connection.starttls()
+        # Treat Connection
+        password = get_credentials(what_for='email')
+        host, port, username, password = "smtp.gmail.com", "587", "sgvolpe1@gmail.com", password
+        connection = smtplib.SMTP(host, port)
+        connection.ehlo()
+        connection.starttls()
 
-    connection.login(username, password)
-    connection.sendmail(email_from, email_to, message.as_string())
-    connection.quit()
-
+        connection.login(username, password)
+        connection.sendmail(email_from, email_to, message.as_string())
+        connection.quit()
+    except Exception: pass
 
 # send_email( attachments=['../Resources/test.txt'])
 
