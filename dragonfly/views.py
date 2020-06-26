@@ -274,7 +274,7 @@ def populate_cache(request):
     return HttpResponse('done')
 
 
-@function_log
+#@function_log
 def see_itinerary(request, pk):
     itinerary = Itinerary.objects.get(pk=pk).get_json()
     return render(request, 'dragonfly/itinerary_details.html',

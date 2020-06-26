@@ -533,3 +533,13 @@ datetime,function_name,process_time (s),result,signature,
 2020-06-26 11:01:17.568369,'parse_response',0.004870499999924505,{0: {'legs': [{'ref': 2}, {'ref': 1}], 'currency':, <Response [200]>
 2020-06-26 11:01:19.218675,'search',7.656977999999981,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=S1DLaevXmg3W78Q5zPm9hMP9zRqfK7vWZSxsYaenRooxa99MQrWsNi6Mf5tYUhnd&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=BUE%2C&dates=2020-07-17%2C2020-07-24%2C'>
 2020-06-26 11:01:26.961738,'search',1.1480897000001278,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=S1DLaevXmg3W78Q5zPm9hMP9zRqfK7vWZSxsYaenRooxa99MQrWsNi6Mf5tYUhnd&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=BUE%2C&dates=2020-07-17%2C2020-07-24%2C'>
+2020-06-26 11:07:03.324349,'get_promotions',0.061901399999999995,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-26 11:07:03.955696,'index',0.6926180000000004,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-26 11:07:11.146638,'see_itinerary',0.021776499999999643,dragonfly/itinerary_tag.html, <WSGIRequest: GET '/see_itinerary/2027'>|pk=2027
+2020-06-26 11:10:37.013328,'checkout',0.016310299999986455,dragonfly/itinerary_tag.html, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:11:15.692671,'checkout',0.019453699999985474,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:11:36.254481,'checkout',0.024636200000003328,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:11:46.725357,'checkout',0.01891169999998965,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:12:46.525615,'checkout',0.020838699999956134,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:13:25.691626,'checkout',0.022303999999962798,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:14:16.101091,'checkout',0.024650000000008276,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027

@@ -146,6 +146,10 @@ navbar{
   body {
     background-color: lightblue;
   }
+  .promo_img{
+    width: 90px;
+    height: 90px;
+  }
 }
 
 @media screen and (max-width: 450px) {

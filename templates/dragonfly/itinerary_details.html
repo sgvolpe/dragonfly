@@ -8,15 +8,13 @@
 
 {% block content %}
 
-<div class="container parallax"  style="background-image: url(../{{itinerary.leg_summary.0.arrival_airport|get_image}})">
+<div class="container parallax"  style="background-image: url(../{{itinerary.leg_summary.0.arrival_airport|get_image}}); height:500px">
 
     <div class="sgv_divider"></div>
     <div class="row" >
 
-        <div class="col-4"> <!--img class="rounded-circle" src="../{{itinerary.leg_summary.0.arrival_airport|get_image}}"
-                                 alt="{{itinerary.leg_summary.0.arrival_airport}}" width="140" height="140"-->
-        </div>
-        <div class="col-8">{% include 'dragonfly/itinerary_tag.html' with itinerary=itinerary itin_id=itin_id %}</div>
+
+        <div class="col-12">{% include 'dragonfly/_partials/itinerary_tag.html' with itinerary=itinerary itin_id=itin_id %}</div>
     </div>
     <div class="row"></div>
     <div class="row"></div>

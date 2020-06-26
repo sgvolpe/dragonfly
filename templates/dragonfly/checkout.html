@@ -6,19 +6,19 @@
 {% block content %}
 {% load extra_tags %}
 
-<div class="container-fluid">
+<div class="container-fluid" style="background-image: url(../{{itinerary.leg_summary.0.arrival_airport|get_image}}); ">>
         {% if ERROR %}
             Sorry! {{ERROR}}
         {% else %}
         <div class="row">
             <code hidden>{{itinerary.id}}</code>
-            <div class="col-6">
-                {% include 'dragonfly/passenger_form.html' with itinerary_id=itinerary.id passengers=passengers %}
+            <div class="col-lg-6">
+                {% include 'dragonfly/_partials/passenger_form.html' with itinerary_id=itinerary.id passengers=passengers %}
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
                 <div class="row">
-                    <div class="col" >
-                        {% include 'dragonfly/itinerary_tag.html' with itin_id=itin_id itinerary=itinerary checkout='no'%}
+                    <div class="col-12" >
+                        {% include 'dragonfly/_partials/itinerary_tag.html' with itin_id=itin_id itinerary=itinerary checkout='no'%}
                         <div class="sgv_divider"></div>
                     </div>
                     <div class="sgv_divider"></div>

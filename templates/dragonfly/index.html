@@ -14,7 +14,7 @@
     <div class="container marketing">
         <div class="row">
             {% for promo in promotions|limit:3 %}
-                {% include 'dragonfly/promotion_bar.html' with promo=promo %}
+                {% include 'dragonfly/_partials/promotion_bar.html' with promo=promo %}
 
             {% endfor %}
         </div>
