@@ -543,3 +543,42 @@ datetime,function_name,process_time (s),result,signature,
 2020-06-26 11:12:46.525615,'checkout',0.020838699999956134,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
 2020-06-26 11:13:25.691626,'checkout',0.022303999999962798,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
 2020-06-26 11:14:16.101091,'checkout',0.024650000000008276,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:15:47.880975,'get_promotions',0.06633080000000025,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-26 11:15:48.554317,'index',0.7402890000000002,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-26 11:16:08.378894,'get_token',1.125619499999999,T1RLAQIOFjnnPjELXSWC4kbU4zH4mnsMSBCtZlLQSUMO2PQlxs, 
+2020-06-26 11:16:12.725404,'parse_response',0.009306900000002116,{0: {'legs': [{'ref': 8}, {'ref': 1}], 'currency':, <Response [200]>
+2020-06-26 11:16:15.255709,'search',8.0116947,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=0FNZo8d2UNrXHVxVeotRTWiul8Rkah277wHGc4WspVMyKWQCv03apsz71mU3krUo&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=BUE%2C&dates=2020-06-27%2C2020-07-04%2C'>
+2020-06-26 11:17:24.079096,'get_promotions',0.05040629999999169,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-26 11:17:24.670349,'index',0.6416143000000005,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-26 11:18:16.410575,'get_promotions',0.052511900000013156,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-26 11:18:16.989612,'index',0.6316452000000083,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-26 11:18:19.158052,'get_token',1.0941943999999921,T1RLAQIghluBWaNUUSqCJ2Fj4RMQybQ7XBBQ1FrhYys2aa6gTb, 
+2020-06-26 11:18:23.021091,'parse_response',0.00035189999999829524,{0: {'legs': [{'ref': 2}, {'ref': 1}], 'currency':, <Response [200]>
+2020-06-26 11:18:24.224664,'search',6.169354599999991,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=BUE%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:18:30.678126,'get_token',0.6911787999999888,T1RLAQKa24FAcnCiMJzZRBF5RBtEEE1z1xCmBQ/hTm/IK/k/N4, 
+2020-06-26 11:18:31.735411,'parse_response',7.120000000782056e-05,No Options Found, <Response [200]>
+2020-06-26 11:18:31.750412,'search',1.773605400000008,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:18:54.076668,'get_token',1.644873600000011,T1RLAQKKbyxvnufTXe14fuovWzzJmsTZWRBOmnVNP+m3uI9rln, 
+2020-06-26 11:18:55.108047,'parse_response',9.399999999004649e-05,No Options Found, <Response [200]>
+2020-06-26 11:18:55.122048,'search',2.6956447000000026,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:23:21.846335,'get_token',1.0972369000000413,T1RLAQL9AWChhs5JrMLG05kFy3NCU24ADBDowQxf2RtE88KKkV, 
+2020-06-26 11:23:22.911237,'parse_response',4.679999995005346e-05,No Options Found, <Response [200]>
+2020-06-26 11:23:22.922236,'search',2.188470300000006,Invalid block tag on line 2: 'static'. Did you forget to register or load this tag?, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:23:44.453487,'get_token',0.6773109999999747,T1RLAQKH4WMZVGdWue7uCZCZhKOpP4am/xDnLr6KmL47eHS+Hk, 
+2020-06-26 11:23:45.504728,'parse_response',9.1999999995096e-05,No Options Found, <Response [200]>
+2020-06-26 11:23:45.518223,'search',1.7500863999999865,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:24:02.944025,'get_token',1.0943899000000101,T1RLAQLEkJJJNFWA2jSMeiYLBrH0pLwVnhAr39L6nckbZf4C0n, 
+2020-06-26 11:24:03.984417,'parse_response',4.930000000058499e-05,No Options Found, <Response [200]>
+2020-06-26 11:24:03.994431,'search',2.1500293000000283,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:24:14.193195,'get_token',0.6959460999999578,T1RLAQLL6UzS32tUdWdMF8IxeuBEy/hG9hAjK0qW7LXrOnKLUS, 
+2020-06-26 11:24:15.283641,'parse_response',4.650000005312904e-05,No Options Found, <Response [200]>
+2020-06-26 11:24:15.294675,'search',1.8125288999999611,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:25:17.711348,'get_token',1.0880496999999423,T1RLAQJ8u9Phq6cIktkdKB9yg4GC/09WdhDU2HV7yotMtj+As2, 
+2020-06-26 11:25:18.714885,'parse_response',4.380000007131457e-05,No Options Found, <Response [200]>
+2020-06-26 11:25:18.726022,'search',2.1079387999999426,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:26:12.874670,'get_token',1.079168999999979,T1RLAQIDMABk5/7X+rXRSvm2omupL6TIDxC61bbQJP4PPvJTaY, 
+2020-06-26 11:26:13.979089,'parse_response',0.00010470000006534974,No Options Found, <Response [200]>
+2020-06-26 11:26:13.990096,'search',2.199556500000085,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:26:43.285146,'get_token',1.1548867999999857,T1RLAQJiCGNjAklnmv9Qg6l6ryHT1sJSLhAa0CS7CvmE/zk0Ge, 
+2020-06-26 11:26:44.299522,'parse_response',5.29999999798747e-05,No Options Found, <Response [200]>
+2020-06-26 11:26:44.309555,'search',2.1841282999999976,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>

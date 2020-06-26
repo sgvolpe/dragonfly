@@ -540,3 +540,7 @@ def site_statistics(request='sad'):
                                                                       'reservation_count': reservation_count,
                                                                       'conversion': conversion('', 'json'),
                                                                       })
+
+
+def simulate_customer():
+    pass
