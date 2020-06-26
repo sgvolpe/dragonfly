@@ -582,3 +582,139 @@ datetime,function_name,process_time (s),result,signature,
 2020-06-26 11:26:43.285146,'get_token',1.1548867999999857,T1RLAQJiCGNjAklnmv9Qg6l6ryHT1sJSLhAa0CS7CvmE/zk0Ge, 
 2020-06-26 11:26:44.299522,'parse_response',5.29999999798747e-05,No Options Found, <Response [200]>
 2020-06-26 11:26:44.309555,'search',2.1841282999999976,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=xHUb1xLOrj104AN1XlNUXjtJOmFnQMwvEyOSPtueWrmB7B6IeXndtPKmuAI60WoM&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=a%2C&dates=2020-06-26%2C2020-06-26%2C'>
+2020-06-26 11:39:27.717114,'get_promotions',0.05831330000000001,[<Itinerary: Itinerary object (2027)>, <Itinerary:, 
+2020-06-26 11:39:28.388160,'index',0.7298086000000001,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-06-26 11:41:45.843438,'checkout',0.029593199999998987,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:43:13.924806,'checkout',0.06101449999999886,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/checkout/2027'>|pk=2027
+2020-06-26 11:47:48.575264,'get_token',1.1238843000000003,T1RLAQK/dBYdN6tLPGV+6U4oxFtEM80EgxD+G7JGH1UI61qyX3, 
+2020-06-26 11:47:49.685207,'parse_response',7.279999999987297e-05,No Options Found, <Response [200]>
+2020-06-26 11:47:55.391040,'get_token',0.6986547000000005,T1RLAQK2FY32Lb+QbmfvY3Xnq1LtwmGsuRA4VzEOWI/FqeTpMU, 
+2020-06-26 11:47:56.429909,'parse_response',9.34000000007984e-05,No Options Found, <Response [200]>
+2020-06-26 11:48:02.263331,'get_token',0.8143796999999999,T1RLAQJV712T6bp4P3319T5bmSfH/AbB4BDjnstjmNnRNYcRed, 
+2020-06-26 11:48:03.315207,'parse_response',4.420000000138202e-05,No Options Found, <Response [200]>
+2020-06-26 11:48:09.032200,'get_token',0.7090069999999997,T1RLAQI/N4q591vnShjenARvBZi8fKAM4hDT0266efHiaQypGD, 
+2020-06-26 11:48:10.101622,'parse_response',5.4099999999834836e-05,No Options Found, <Response [200]>
+2020-06-26 11:48:15.794612,'get_token',0.6863485000000011,T1RLAQIlgVFXH21vqEhXd6o8rGqYwpBH2BCS23GXfz6d9a04oq, 
+2020-06-26 11:48:25.446245,'parse_response',0.005246399999997209,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, <Response [200]>
+2020-06-26 11:48:34.143748,'get_token',1.1237071999999984,T1RLAQL2bsbilFvid2OklfHg3A6SCV5XOxBTXPc7PB0C9ZkVU1, 
+2020-06-26 11:48:43.808767,'parse_response',0.0032667999999915764,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, <Response [200]>
+2020-06-26 11:48:51.414299,'get_token',0.6959436000000068,T1RLAQKCt1KOiNnXfgV4tnXQGnheLGI2RxApq7RppagJT0HGry, 
+2020-06-26 11:48:56.201145,'parse_response',0.006713699999991718,{0: {'legs': [{'ref': 3}, {'ref': 11}], 'currency', <Response [200]>
+2020-06-26 11:49:04.339298,'get_token',1.0882833999999946,T1RLAQIsP2+bNrXL5MxJxxjeS8jU/q0c2xDVA4V4MQ14CKG2z5, 
+2020-06-26 11:49:08.543633,'parse_response',0.007692500000004543,{0: {'legs': [{'ref': 3}, {'ref': 9}], 'currency':, <Response [200]>
+2020-06-26 11:49:16.187420,'get_token',0.6949605000000076,T1RLAQKZAeL/GPf5WWABFMvjy2Usdw+wLhDo8LUnEs0ubLE4L1, 
+2020-06-26 11:49:26.070030,'parse_response',0.034570399999992674,{0: {'legs': [{'ref': 21}, {'ref': 29}], 'currency, <Response [200]>
+2020-06-26 11:49:33.738386,'get_token',0.6871921000000043,T1RLAQK2odBNnnDyakokUt+wnAN58SLJ7xCQrNSrxfGqvoUTS+, 
+2020-06-26 11:49:43.227740,'parse_response',0.014945600000004333,{0: {'legs': [{'ref': 23}, {'ref': 32}], 'currency, <Response [200]>
+2020-06-26 11:49:51.367279,'get_token',0.7088243999999975,T1RLAQIByRQkcJOoQEMwCBeUkkz5TSoEehCChivz4/FtBbjVO6, 
+2020-06-26 11:49:58.037887,'parse_response',0.011655799999999772,{0: {'legs': [{'ref': 18}, {'ref': 38}], 'currency, <Response [200]>
+2020-06-26 11:50:06.261520,'get_token',1.0889621999999974,T1RLAQKKStpOIntZqEPtU7NcAZs/oNp/wRBfqXpHpp5iMlHPRs, 
+2020-06-26 11:50:14.439644,'parse_response',0.014354200000013861,{0: {'legs': [{'ref': 22}, {'ref': 12}], 'currency, <Response [200]>
+2020-06-26 11:50:22.062180,'get_token',0.7028540999999962,T1RLAQKSKSZD4I9q01mzv5YUViEQcP9+XRC2ppeqsw/ICqWrrF, 
+2020-06-26 11:50:30.067888,'parse_response',0.050425100000012435,{0: {'legs': [{'ref': 55}, {'ref': 66}], 'currency, <Response [200]>
+2020-06-26 11:50:38.089330,'get_token',1.0906648000000132,T1RLAQKfEF/hOzCdXvpmlwCXzEu9Dv2cGhBAa2cbJC8wKNpX4p, 
+2020-06-26 11:50:43.159808,'parse_response',0.023468900000011672,{0: {'legs': [{'ref': 49}, {'ref': 2}], 'currency', <Response [200]>
+2020-06-26 11:50:51.206517,'get_token',0.9613787000000116,T1RLAQI1ezijxCqltYsoraQWgXilSWU7WBAo0l13EkZUE7H6g7, 
+2020-06-26 11:50:55.287640,'parse_response',0.024244500000008884,{0: {'legs': [{'ref': 54}, {'ref': 82}], 'currency, <Response [200]>
+2020-06-26 11:51:03.194607,'get_token',0.9191596999999945,T1RLAQINZsiC4RbLOyJQscNIXjkXS4tZWhAUq+9FY4jF+taHLv, 
+2020-06-26 11:51:07.459315,'parse_response',0.02199629999998365,{0: {'legs': [{'ref': 84}, {'ref': 36}], 'currency, <Response [200]>
+2020-06-26 11:51:15.582401,'get_token',1.0951952000000063,T1RLAQLKrU2cq2u0RSQFsb+I/ZL1ryht6BAWVaNZrXLjJ6JcE1, 
+2020-06-26 11:51:24.932246,'parse_response',0.014568099999991091,list index out of range, <Response [200]>
+2020-06-26 11:51:30.639077,'get_token',0.6917644999999766,T1RLAQJJyCn7glxwsuDDfqZOv3b/CGs+yBAqb6JB6zLS7JH07v, 
+2020-06-26 11:51:41.392552,'parse_response',0.01226289999999608,list index out of range, <Response [200]>
+2020-06-26 11:51:47.490294,'get_token',1.0907641000000012,T1RLAQJpCVROvL7CHbz815wNb1w2AsnaKhDo+2tnlidpwlJnz8, 
+2020-06-26 11:51:57.102598,'parse_response',0.008576699999991888,list index out of range, <Response [200]>
+2020-06-26 11:52:03.007325,'get_token',0.8979617999999618,T1RLAQIipp3GDrnSZnImJM9L4RN6kVJZmRDUCsoacAyczWjBXH, 
+2020-06-26 11:52:12.444427,'parse_response',0.030788200000017696,list index out of range, <Response [200]>
+2020-06-26 11:52:18.557374,'get_token',1.1038543000000232,T1RLAQLhaF94OpQzqq1FQTyzT0/QcaYcMRDvfNbRcnRSihUhBY, 
+2020-06-26 11:52:23.545115,'parse_response',0.02204799999998386,{0: {'legs': [{'ref': 33}, {'ref': 9}], 'currency', <Response [200]>
+2020-06-26 11:52:31.145834,'get_token',0.7045216999999866,T1RLAQIiQfbsboy5bBENtAr/H9urxNuScxB55aLuboDy+HhDAy, 
+2020-06-26 11:52:36.208416,'parse_response',0.023749000000009346,{0: {'legs': [{'ref': 39}, {'ref': 11}], 'currency, <Response [200]>
+2020-06-26 11:52:43.775608,'get_token',0.6978014999999687,T1RLAQIl+cVIFqT/7vhgYeIdbt4+p/eBdRAICdiQ7lWSXsMaum, 
+2020-06-26 11:52:47.135410,'parse_response',0.018397600000014336,{0: {'legs': [{'ref': 30}, {'ref': 44}], 'currency, <Response [200]>
+2020-06-26 11:52:55.238221,'get_token',1.0983760000000302,T1RLAQI2J7NFPWXs/KAlQjr9X43ekzRloBAqsNSU/7aWUJzj23, 
+2020-06-26 11:53:00.587179,'parse_response',0.023223799999982475,{0: {'legs': [{'ref': 17}, {'ref': 24}], 'currency, <Response [200]>
+2020-06-26 11:53:08.577318,'get_token',0.8308844999999678,T1RLAQKDnXHzHb+TwH39DbslIESknAAebRC3a1VnOwPuVQhxDD, 
+2020-06-26 11:53:13.043063,'parse_response',0.028712100000007013,{0: {'legs': [{'ref': 18}, {'ref': 19}], 'currency, <Response [200]>
+2020-06-26 11:53:20.737981,'get_token',0.7017683000000261,T1RLAQLCwh9VyLtJ4bKg4XMGdxoax+mXZxDu6QXyFthFuYFE0a, 
+2020-06-26 11:53:26.915441,'parse_response',0.02757370000000492,{0: {'legs': [{'ref': 21}, {'ref': 22}], 'currency, <Response [200]>
+2020-06-26 11:53:35.157889,'get_token',1.1156848999999625,T1RLAQKzJacFkaYUjPMg++PK0hJbtDGO5hBB0y5zIKjX2YZn6W, 
+2020-06-26 11:53:39.982585,'parse_response',0.024243799999965177,{0: {'legs': [{'ref': 36}, {'ref': 46}], 'currency, <Response [200]>
+2020-06-26 11:53:47.569338,'get_token',0.6904197999999724,T1RLAQLONmt8//g7r/VavpP27R44G+ogHBAQNRpOx1TDB7+0WX, 
+2020-06-26 11:53:52.688049,'parse_response',0.04898600000001352,{0: {'legs': [{'ref': 36}, {'ref': 44}], 'currency, <Response [200]>
+2020-06-26 11:54:00.470737,'get_token',0.7073566000000255,T1RLAQJxHYhM9w44Z/8eDj2OiXPijg7ebxDIn7mhR9yGhenUGU, 
+2020-06-26 11:54:04.217790,'parse_response',0.026863600000012866,{0: {'legs': [{'ref': 9}, {'ref': 47}], 'currency', <Response [200]>
+2020-06-26 11:54:12.820527,'get_token',1.1090904999999793,T1RLAQK/PhuwC044GZjx4Y5FIZBTgdNgpxDPruv7RSchX03mNn, 
+2020-06-26 11:54:21.286225,'parse_response',0.023331900000016503,{0: {'legs': [{'ref': 9}, {'ref': 41}], 'currency', <Response [200]>
+2020-06-26 11:54:29.045239,'get_token',0.674728000000016,T1RLAQKBINriXAXQgmrGlRX2kI9s5JJ6XRDCycvaNOdU9xVHi4, 
+2020-06-26 11:54:34.008576,'parse_response',0.02959970000000567,{0: {'legs': [{'ref': 69}, {'ref': 50}], 'currency, <Response [200]>
+2020-06-26 11:54:41.930494,'get_token',0.6938231000000314,T1RLAQLBO5Su029N7IlBk+VoQS3sSXQQlBDp8R29bxaHnt5cNa, 
+2020-06-26 11:54:50.929828,'parse_response',0.04319879999997056,{0: {'legs': [{'ref': 27}, {'ref': 2}], 'currency', <Response [200]>
+2020-06-26 11:54:58.694462,'get_token',0.6849209999999744,T1RLAQJHgILCoadRGhqfwv7RCcBBwlqiqBB9f+MBTOvUqGlLAY, 
+2020-06-26 11:55:02.728273,'parse_response',0.029109400000038477,{0: {'legs': [{'ref': 57}, {'ref': 42}], 'currency, <Response [200]>
+2020-06-26 11:55:10.595489,'get_token',0.6891924999999901,T1RLAQLgvI4cFTdCJUb9WD67iS3y8NiKvRCWe/WNHexVQUXcUd, 
+2020-06-26 11:55:15.324990,'parse_response',0.03417369999999664,{0: {'legs': [{'ref': 31}, {'ref': 8}], 'currency', <Response [200]>
+2020-06-26 12:08:00.803698,'get_token',1.1037928000000008,T1RLAQJTtqdr2I17U1ZqYICgWNHK3hduzxAZe2Uu+qnTJRUE71, 
+2020-06-26 12:08:10.565050,'parse_response',0.024072900000000175,list index out of range, <Response [200]>
+2020-06-26 12:08:16.270420,'get_token',0.6956401999999997,T1RLAQKwaqb2VZRW4ByqX2ThEQp9RumG9BAJCXMfz1qIMWLVAK, 
+2020-06-26 12:08:20.334250,'parse_response',0.020614399999999478,{0: {'legs': [{'ref': 42}, {'ref': 49}], 'currency, <Response [200]>
+2020-06-26 12:08:29.071954,'get_token',0.6934950999999998,T1RLAQKiCQHHhU4p7d+SbL8AX1SWBVeWfRBYO7Lq05jQODrRte, 
+2020-06-26 12:08:30.148069,'parse_response',5.669999999469155e-05,No Options Found, <Response [200]>
+2020-06-26 12:08:36.371511,'get_token',1.214321499999997,T1RLAQKkfL+xMiUqkCnKA9IPLtjaI0tJzhBZQQ8SPgLwyAhbTj, 
+2020-06-26 12:08:41.435132,'parse_response',0.05041669999999954,{0: {'legs': [{'ref': 73}, {'ref': 18}], 'currency, <Response [200]>
+2020-06-26 12:10:02.714521,'get_token',1.1079578999999953,T1RLAQIRvbixTrcDZpZ1u82MrvRcG9YvmxCTOxYFp7oanHPdfj, 
+2020-06-26 12:10:06.590730,'parse_response',0.013065100000005714,{0: {'legs': [{'ref': 32}, {'ref': 15}], 'currency, <Response [200]>
+2020-06-26 12:10:15.240058,'get_token',1.0604763000000048,T1RLAQIfafeyuRENA3+k6SAwL0ZDFgALBxBqNGdFcgDldFEZnJ, 
+2020-06-26 12:10:19.728582,'parse_response',0.025221199999990063,{0: {'legs': [{'ref': 52}, {'ref': 8}], 'currency', <Response [200]>
+2020-06-26 12:11:00.251297,'get_token',1.1014453,T1RLAQLsPSoA4aQGDDGqp16TUUE8G7mlFBAvLoKULq4akYstIT, 
+2020-06-26 12:11:02.408191,'parse_response',0.01531400000000005,{0: {'legs': [{'ref': 21}, {'ref': 25}], 'currency, <Response [200]>
+2020-06-26 12:11:10.976328,'get_token',0.6866683999999985,T1RLAQIkMb0svWIxyKuh7ebsbF0rT/aloRAqkcsLAIbv4kOeY/, 
+2020-06-26 12:13:06.661522,'get_token',1.0979264999999998,T1RLAQI1j8ldqNcFw8RHfYBx1y2LPYwaDRA3hdhdldTLFX6IVO, 
+2020-06-26 12:13:10.298064,'parse_response',0.04852909999999966,{0: {'legs': [{'ref': 3}, {'ref': 43}], 'currency', <Response [200]>
+2020-06-26 12:13:25.205035,'get_token',0.6992925999999997,T1RLAQLciZlnxkwIOHe1ipWE8v4t8BZX+xDRa8d4LvV/Zzuy3m, 
+2020-06-26 12:13:29.415687,'parse_response',0.0336072000000005,{0: {'legs': [{'ref': 65}, {'ref': 53}], 'currency, <Response [200]>
+2020-06-26 12:13:39.117988,'get_token',1.1063241999999995,T1RLAQLjT4ueK4wC2VhtlzYP39SwCkYDiBDbvqaxfeJ37hES24, 
+2020-06-26 12:14:49.756371,'get_token',1.1003565999999996,T1RLAQLvCaM/iDOayxTS2K9n0jkP9rhhBxD+8xnnL5sXoFrFrU, 
+2020-06-26 12:14:52.723603,'parse_response',0.017536400000000896,{0: {'legs': [{'ref': 30}, {'ref': 43}], 'currency, <Response [200]>
+2020-06-26 12:15:01.674058,'get_token',0.6808507000000006,T1RLAQLegvlp2+dJbbKvDKuK3lCBXStNoRAIHJvtMVgffjSWuW, 
+2020-06-26 12:15:05.611871,'parse_response',0.08017279999999971,{0: {'legs': [{'ref': 17}, {'ref': 70}], 'currency, <Response [200]>
+2020-06-26 12:15:14.457440,'get_token',0.8561418999999972,T1RLAQLSl5BKAenBau4oULZhHdKDbl2PsBAt8Wcq6NIVlDFJyN, 
+2020-06-26 12:15:36.647096,'get_token',1.1059647999999989,T1RLAQJoJW8oR+1xpnv7vo4q6iE2+4GrKhAJNfmbJ6AH+qz8qq, 
+2020-06-26 12:15:40.737756,'parse_response',0.039215999999999696,{0: {'legs': [{'ref': 20}, {'ref': 11}], 'currency, <Response [200]>
+2020-06-26 12:15:50.981677,'get_token',0.957816600000001,T1RLAQK29I6cxxKwq6kuH70vPzMbylaO4hCtrKj8t41JfLM5BP, 
+2020-06-26 12:15:54.314110,'parse_response',0.02415399999999579,{0: {'legs': [{'ref': 47}, {'ref': 35}], 'currency, <Response [200]>
+2020-06-26 12:16:03.072782,'get_token',0.6872070999999949,T1RLAQJOFu+maf0AWnm7uyDnuMV02+lN3RA5EEIpq2SaOReS1q, 
+2020-06-26 12:16:08.539850,'parse_response',0.1353504000000001,{0: {'legs': [{'ref': 60}, {'ref': 69}], 'currency, <Response [200]>
+2020-06-26 12:16:18.633550,'get_token',1.0931749999999951,T1RLAQIFklLpQM0oPvKUOGNzVDlEUUQpqRB289GOSiuqdeP7oT, 
+2020-06-26 12:16:24.139850,'parse_response',0.040303499999993164,{0: {'legs': [{'ref': 73}, {'ref': 71}], 'currency, <Response [200]>
+2020-06-26 12:16:57.789231,'get_token',1.0996691999999992,T1RLAQLooecb8T67oOZfSzwMRM+LlIiythABndDhOnYBKiUYwD, 
+2020-06-26 12:17:02.128766,'parse_response',0.0029474000000000444,{0: {'legs': [{'ref': 1}, {'ref': 6}], 'currency':, <Response [200]>
+2020-06-26 12:17:11.826465,'get_token',0.6992870999999994,T1RLAQLXNB6EAg01BO/5fg2/mIyqr1bznRDv2IN5asyVhv8wWo, 
+2020-06-26 12:17:16.435352,'parse_response',0.028710900000000095,{0: {'legs': [{'ref': 13}, {'ref': 9}], 'currency', <Response [200]>
+2020-06-26 12:17:25.406027,'get_token',0.6976790000000008,T1RLAQIWRwhTIx7yszr8PrFaAKZXA+IA2BBeESGd3KHYbYITC9, 
+2020-06-26 12:17:30.019039,'parse_response',0.023816000000003612,{0: {'legs': [{'ref': 5}, {'ref': 6}], 'currency':, <Response [200]>
+2020-06-26 12:17:39.406337,'get_token',1.096086900000003,T1RLAQK1YHIix3HDMbErKD4Ml+skfHArhRD7yZAiVreDnO+k52, 
+2020-06-26 12:17:49.176552,'parse_response',0.08100819999999942,{0: {'legs': [{'ref': 72}, {'ref': 25}], 'currency, <Response [200]>
+2020-06-26 12:18:09.193969,'reservation_details',0.050134999999997376,dragonfly/passenger_form.html, <WSGIRequest: GET '/reservation_details/15'>|pk=15
+2020-06-26 12:18:58.549515,'reservation_details',0.04081979999999996,dragonfly/passenger_form.html, <WSGIRequest: GET '/reservation_details/15'>|pk=15
+2020-06-26 12:19:27.730517,'reservation_details',0.03362519999999991,dragonfly/passenger_form.html, <WSGIRequest: GET '/reservation_details/15'>|pk=15
+2020-06-26 12:19:53.086312,'reservation_details',0.04147489999999987,dragonfly/passenger_form.html, <WSGIRequest: GET '/reservation_details/15'>|pk=15
+2020-06-26 12:20:12.907243,'get_token',1.1122331999999986,T1RLAQJ+7oVi80OKDw+hGIzxkjgerMfzExCxwHNwsZGTwLE4yB, 
+2020-06-26 12:20:19.662974,'parse_response',0.020170500000002534,list index out of range, <Response [200]>
+2020-06-26 12:20:25.476306,'get_token',0.7922240999999985,T1RLAQJw82f/ZO2RauDvvo+k0lT2Q88JGhCV8ZkqqeCcDiioow, 
+2020-06-26 12:20:30.604238,'parse_response',0.021266000000004226,{0: {'legs': [{'ref': 22}, {'ref': 48}], 'currency, <Response [200]>
+2020-06-26 12:20:40.064143,'get_token',0.6869048999999947,T1RLAQKGH4ZQl/gnkmotmV8+oqhH0luo0BCR0rGO0m1TDzb2mJ, 
+2020-06-26 12:20:43.058065,'parse_response',0.011615700000000118,{0: {'legs': [{'ref': 29}, {'ref': 13}], 'currency, <Response [200]>
+2020-06-26 12:20:50.858994,'reservation_details',0.029291199999995854,dragonfly/passenger_form.html, <WSGIRequest: GET '/reservation_details/31'>|pk=31
+2020-06-26 12:20:52.720508,'get_token',1.1071634999999986,T1RLAQJr8xQYIRrUtHtJcIcqgejKn2BpxBACRbgg4VWTdOJXwy, 
+2020-06-26 12:20:57.596835,'parse_response',0.031736099999989165,{0: {'legs': [{'ref': 30}, {'ref': 98}], 'currency, <Response [200]>
+2020-06-26 12:21:14.237879,'reservation_details',0.02870389999999645,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/reservation_details/31'>|pk=31
+2020-06-26 12:21:59.967783,'get_token',1.066858300000007,T1RLAQKV+RqVoWbKHV/ndzyactkLENamlhDRHk4qULKuCwEu3C, 
+2020-06-26 12:22:03.222022,'parse_response',0.009773499999994328,'baggageInformation', <Response [200]>
+2020-06-26 12:22:08.935158,'get_token',0.6890436999999849,T1RLAQIaMjGf+LoOwnE+2s8jzLCD2OQgERAFYcVjqgoCsdSoFu, 
+2020-06-26 12:22:09.960410,'parse_response',3.849999998806197e-05,No Options Found, <Response [200]>
+2020-06-26 12:22:15.653731,'get_token',0.6838949000000127,T1RLAQLqu036NCwh8rojmwOxBDRRjlCRphCB9M7s19U4iyiF2Z, 
+2020-06-26 12:22:19.644731,'parse_response',0.05212139999997589,{0: {'legs': [{'ref': 57}, {'ref': 66}], 'currency, <Response [200]>
+2020-06-26 12:22:28.872102,'get_token',0.6955717000000163,T1RLAQLr7MVisOVln2YRIZSq7a7NkZekyBAYd5eyidXaocwZ9+, 
+2020-06-26 12:22:35.159572,'parse_response',0.028264300000017784,{0: {'legs': [{'ref': 41}, {'ref': 26}], 'currency, <Response [200]>
+2020-06-26 12:23:02.653013,'reservation_details',0.03238090000002103,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/reservation_details/34'>|pk=34

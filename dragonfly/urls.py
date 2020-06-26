@@ -27,6 +27,8 @@ urlpatterns = [
 
     path('conversion', views.conversion, name='conversion'),
     path('populate_cache', views.populate_cache, name='populate_cache'),
+    path('simulate_customer', views.simulate_customer, name='simulate_customer'),
+
     path('user_login', views.user_login, name='user_login'),
     path('user_logout', views.user_logout, name='user_logout'),
     path('user_register', views.user_register, name='user_register'),

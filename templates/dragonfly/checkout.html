@@ -6,7 +6,7 @@
 {% block content %}
 {% load extra_tags %}
 
-<div class="container-fluid" style="background-image: url(../{{itinerary.leg_summary.0.arrival_airport|get_image}}); ">>
+<div class="container-fluid" style="background-image: url(../{{itinerary.leg_summary.0.arrival_airport|get_image}}); ">
         {% if ERROR %}
             Sorry! {{ERROR}}
         {% else %}

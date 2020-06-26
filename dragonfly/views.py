@@ -391,6 +391,7 @@ def create_reservation(request):
     names = request.POST.get('names', None).split(',')
     surnames = request.POST.get('surnames', None).split(',')
     phones = request.POST.get('phones', None).split(',')
+    emails = request.POST.get('emails', None).split(',')
 
     session_id = request.session._session_key
 
@@ -405,7 +406,7 @@ def create_reservation(request):
     passengers = []
     if DEBUG: print (names)
     for i, _ in enumerate(names):
-        passenger = Passenger(name=names[i], surname=surnames[i], phone=phones[i])
+        passenger = Passenger(name=names[i], surname=surnames[i], phone=phones[i], email=emails[i])
         passenger.save()
         reservation.add_passenger(passenger)
         reservation.save()
@@ -415,6 +416,9 @@ def create_reservation(request):
 
     if DEBUG: print('*****************CREATED')
 
+    email_body = f'<html><body><h1>Reservation Created: {reservation.pk} </h1><h4></h4></body></html>'
+    Handyman.send_email(email_to={emails[0]}, email_from='sgvolpe1@gmail.com', email_body=email_body,
+                        email_subject=f'Reservation Created: {reservation.pk}', attachments=[])
     result = book(session_id=session_id)
     if result == 'success':
         return redirect(reservation, context=context)
@@ -542,5 +546,67 @@ def site_statistics(request='sad'):
                                                                       })
 
 
-def simulate_customer():
-    pass
+def simulate_customer(request):
+
+
+    session_id = request.session._session_key
+    print('### SEARCHING: ')
+    import numpy as np
+    airports = ['MVD', 'BUE', 'SCL', 'MIA', 'NYC', 'SYD', 'MAD', 'MEX', 'LON', 'MXP', 'SIN']
+
+
+    for sta, ret in Handyman.generate_date_pairs():
+        ori = np.random.choice(airports)
+        des = np.random.choice(airports)
+        time.sleep(5)
+        if DEBUG: print(ori, des, sta, ret)
+        try:
+            adt = np.random.choice([1, 2, 3], p=[.7, .2, .1])
+            cnn = np.random.choice([0, 1, 2], p=[.8, .1, .1])
+            inf = np.random.choice([0, 1, 2], p=[.8, .1, .1])
+
+            # Search
+            if DEBUG: print('SEARCHING *')
+            search, id = search_backend(origins=ori, destinations=des, dates=f'{sta},{ret}', cache=True, adt=adt, cnn=cnn,
+                           inf=inf, session_id=session_id)
+
+            itineraries = search.pull()
+
+            #TODO: Conversion
+            # Choose one itinerary
+            if DEBUG: print('CHOOSING ITIN *')
+            itinerary_id = np.random.choice(list(itineraries.keys()))
+            if DEBUG: print(f'CHOOSING ITIN:{itinerary_id}*')
+            itinerary = Itinerary.objects.get(pk=itinerary_id)
+
+            # Create Reservtion
+            if DEBUG: print('CREATING RES*')
+            print (adt,  cnn, inf)
+            reservation = Reservation(itinerary_id=itinerary)
+            reservation.save()
+
+            pax_count = adt + cnn + inf
+
+            print (f'pax_count:{pax_count}')
+
+            names = ['TestName' for i in range(pax_count)]
+            surnames = ['TestSurame' for i in range(pax_count)]
+            phones = ['095510000' for i in range(pax_count)]
+            emails = ['sgvolpe@gmail.com' for i in range(pax_count)]
+            for i, _ in enumerate(names):
+                passenger = Passenger(name=names[i], surname=surnames[i], phone=phones[i], email=emails[i])
+                passenger.save()
+                reservation.add_passenger(passenger)
+                reservation.save()
+
+            email_body = f'<html><body><h1>Reservation Created: {reservation.pk} </h1><h4>' \
+                         f'You can See your reservation ' \
+                         f'<a href="http://dragonflytravel.eu.pythonanywhere.com/reservation_details/{reservation.pk}">here</a></h4></body></html>'
+            Handyman.send_email(email_to=emails[0], email_from='sgvolpe1@gmail.com', email_body=email_body,
+                                email_subject=f'Reservation Created: {reservation.pk}', attachments=[])
+        except Exception as e:
+            print(str(e))
+
+    # Book
+
+    # Checkout

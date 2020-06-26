@@ -62,6 +62,7 @@
               <input type="text" value="" name="names" id="names" hidden>
               <input type="text" value="" name="surnames" id="surnames" hidden>
               <input type="text" value="" name="phones" id="phones" hidden>
+              <input type="text" value="" name="emails" id="emails" hidden>
 
             </form>
           </div>
@@ -98,6 +99,15 @@
                 }) ;
                 phones = phones.substring(0, phones.length - 1);
                 $('#phones').val(phones)
+            }) ;
+
+            $('.email').change(function(){
+                emails = '' ;
+                $('.email').each(function(){
+                    emails += $(this).val()+ ','
+                }) ;
+                emails = emails.substring(0, emails.length - 1);
+                $('#emails').val(emails)
             }) ;
             $('#itinerary_id').val({{itinerary_id}})
         }) ;
