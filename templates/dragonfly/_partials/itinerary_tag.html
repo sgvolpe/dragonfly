@@ -1,0 +1,78 @@
+{% load static %}
+{% load extra_tags %}
+
+<div class="container-fluid itinerary_container">
+    <code hidden>{{itinerary}}</code>
+    <div class="row itinerary_row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-8">
+                    <code hidden>{{itinerary.id}}</code>
+                    <h4><small>{{itinerary.currency}}</small>{{itinerary.total_price}}</h4>
+                    <h6>{{itinerary.travel_time|parse_time}} {{itinerary.bags}} x <i class="fa fa-suitcase" aria-hidden="true"></i></h6>
+                </div>
+                <div class="col-3">
+                    {% if checkout == 'no' %}{% else %}<a href="{% url 'checkout' pk=itinerary.id %}"><button type="button" class="btn btn-warning" >Select</button></a>{% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="" style="width: 2px;  background-color:#e2e2e2"></div>
+            {% for flight in itinerary.leg_summary %}
+                <div class="row">
+                    <div class="col-2">
+                        <span class="airline_icon"><img src="{% static 'images/dragonfly/airline_logos/' %}{{itinerary.main_carrier}}.ico" alt="{{flight.carrier}}" style="height:40px;width:40px"></span>
+                    </div>
+                    <div class="col-2">
+                        <h5>{{flight.departure_airport}}</h5>
+                        <h5><small>{{flight.departure_date|friendly_date}} {{flight.departure_time}}</small></h5>
+                    </div>
+                    <div class="col-2" style="height:1px; widht:100%; background-color:#e2e2e2; margin-top:18px">{{flight.flight_number}}</div>
+                    <div class="col-2">
+                        <h5>{{flight.arrival_airport}}</h5>
+                        <h5><small>{{flight.arrival_date|friendly_date}} {{flight.arrival_time}}</small></h5>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row" style="height: 2px;  background-color:#e2e2e2"></div>
+    <div class="row" >
+        <div class="col">
+            <div class="row"><div class="col-md-2"></div><span class="itinerary_show">See Itinerary Details</span></div>
+            <div class="row full_itinerary_div" style="display:none">
+                <div class="col-md-3">
+                    {{itinerary.full_fare_details}}
+                </div>
+                <div style="width: 2px;  background-color:#e2e2e2"></div>
+                <div class="col-md-8">
+                {% for flight in itinerary.flights %}
+                    <div class="row">
+                    <div class="col-2">
+                        <span class="airline_icon"><img src="{% static 'images/dragonfly/airline_logos/' %}{{itinerary.main_carrier}}.ico"
+                                                        alt="{{flight.carrier}}" style="height:40px;width:40px"></span>
+                    </div>
+                    <div class="col-2">
+                        <h5>{{flight.departure_airport}}</h5>
+                        <h5><small>{{flight.departure_date|friendly_date}} {{flight.departure_time}}</small></h5>
+                    </div>
+                    <div class="col-2" style="height:1px; widht:100%; background-color:#e2e2e2; margin-top:18px">{{flight.flight_number}}</div>
+                    <div class="col-2">
+                        <h5>{{flight.arrival_airport}}</h5>
+                        <h5><small>{{flight.arrival_date|friendly_date}} {{flight.arrival_time}}</small></h5>
+                    </div>
+                </div>
+
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+    <div class="row" >
+        <div class="col"><h5><span class="badge badge-warning">{{tag}}</span></h5></div>
+    </div>
+</div>
+
+</div>

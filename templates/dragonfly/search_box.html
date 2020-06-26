@@ -1,18 +1,13 @@
 {% load static %}
-<div class="container  search-box">
-        <div class="row">
-           <div class="col">
-
-
-                   <div class="form-row">
-                       <img src="{% static 'images/dragonfly/plane_ico.svg' %}" alt="" style="height:25px;height:25px">
-                   </div><div class="sgv_divider"></div>
+<div class="container search-box">
+    <div class="row">
+       <div class="col">
+           <div class="sgv_divider"></div>
                <form method="GET" action="{% url 'search' %}" id="search-form">
                    {% csrf_token %}
-
                    <div class="form-row" style="align-items: baseline;">
-                       <div class="col" id="onds" ></div>
-                       <div class="col-2" ><button id="submit-btn" type="submit" class="btn btn-warning btn-lg">Search</button></div>
+                       <div class="col-md-10" id="onds" ></div>
+                       <div class="col-md-2" ><button id="submit-btn" type="submit" class="btn btn-warning btn-lg">Search</button></div>
                    </div>
                    <div class="form-row">
                        <div class="form-group col-md-2">
@@ -24,15 +19,15 @@
 
                        <div class="form-group col-md-4">
                            <div class="row">
-                               <div class="col-3">
+                               <div class="col-sm-3">
                                    <label for="input_adt">Adults</label>
                                    <input type="number" class="form-control" id="input_adt" name="adt" placeholder="Adults" value="1">
                                </div>
-                               <div class="col-3">
+                               <div class="col-sm-3">
                                    <label for="input_cnn">Child</label>
                                    <input type="number" class="form-control" id="input_cnn" name="cnn" placeholder="Child" value="0">
                               </div>
-                               <div class="col-3">
+                               <div class="col-sm-3">
                                    <label for="input_inf">Infant</label>
                                    <input type="number" class="form-control" id="input_inf" name="inf" placeholder="Infant" value="0">
                                </div>
@@ -54,7 +49,7 @@
                        </div>
 
                    </div>
-                    <div class="form-row">
+                   <div class="form-row">
                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
                            <label class="btn btn-warning btn-sm triptype active" id="rt">
                                <input type="radio" name="options"  autocomplete="off" checked value="rt"> Roundtrip
@@ -68,8 +63,6 @@
                         </div>
                    </div>
                    <div class="sgv_divider"></div>
-
-
                    <input type="text" name="origins" id="origins" hidden>
                    <input type="text" name="destinations" id="destinations" hidden>
                    <input type="text" name="dates" id="dates" hidden>
@@ -78,10 +71,8 @@
            </div>
         </div>
         <div class="row">
-
         </div>
         <div class="row"></div>
-
     </div>
 
 
