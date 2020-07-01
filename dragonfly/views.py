@@ -296,7 +296,7 @@ def populate_cache(request):
                                    inf=inf, session_id=session_id)
                 except Exception as e:
                     print(str(e))
-    return HttpResponse('done')
+    return HttpResponse('ok')
 
 
 # @function_log
