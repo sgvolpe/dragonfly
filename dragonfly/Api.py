@@ -122,16 +122,15 @@ def parse_response(http_response):
 
                                       }
 
-                    if 'departureDateAdjustment' in flight:
+                    if 'departureDateAdjustment' in schedule:
                         flight_details['departure_date'] = add_days_to_date(flight_details['departure_date'],
-                                                                            flight['departureDateAdjustment'])
+                                                                            schedule['departureDateAdjustment'])
 
                     if 'dateAdjustment' in flight['departure']:
                         flight_details['departure_date'] = add_days_to_date(flight_details['departure_date'],
                                                                             flight['departure']['dateAdjustment'])
 
-                    flight_details['arrival_date'] = flight_details['departure_date']
-
+                    flight_details['arrival_date'] = flight_details['departure_date'] # default value could be overriden on next line
                     if 'dateAdjustment' in flight['arrival']:
                         flight_details['arrival_date'] = add_days_to_date(flight_details['arrival_date'],
                                                                           flight['arrival']['dateAdjustment'])
@@ -197,7 +196,7 @@ def get_persona(passengers={'ADT': 1}):
 
 # @log_search
 #@function_log
-def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10, session_id=''):
+def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10, session_id='', conversation_id='none'):
     if DEBUG: print (f'**********SENDING BFM: {session_id}')
     sep = ','
     standard_time = '12:00:00'
@@ -242,6 +241,9 @@ def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10, 
         if ptc > 0:
             payload['OTA_AirLowFareSearchRQ']['TravelerInfoSummary']['AirTravelerAvail'][0][
                 "PassengerTypeQuantity"].append({"Code": codes[id], "Quantity": ptc})
+
+    payload['OTA_AirLowFareSearchRQ']['TPA_Extensions']['IntelliSellTransaction']['SabreAth']['ConversationID'] = \
+        f'dragonflytravel.eu.pythonanywhere.com/{conversation_id}'
 
     payload = json.dumps(payload)
 

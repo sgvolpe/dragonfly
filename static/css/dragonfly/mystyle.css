@@ -18,9 +18,9 @@ h6{
     color: var(--font_color);
 }
 
-navbar{
-    background: red;
-    position: fixed;
+nav{
+    background:rebeccapurple;
+  position: fixed;
   z-index: 1;
   top: 0px;
   left: 0px;
@@ -110,31 +110,27 @@ navbar{
 }
 
 .sidenav {
-
   background: var(--primary_color);
   color: var(--font2_color);
-
   align-items: center;
   box-shadow: 0 8px 6px -6px black;
 }
 
 @media only screen and (min-width: 1400px) {
   .sidenav {
-      width: 250px;
-      position: fixed;
+      //width: 250px;
+      //position: fixed;//padding: 8px 0;//top: 100px; overflow-x: hidden;
       z-index: 1;
-      top: 100px;
+
+      overflow-x: hidden;
+
       left: 10px;
       background: var(--primary_color);
       color: var(--font2_color);
-      overflow-x: hidden;
-      //padding: 8px 0;
       align-items: center;
       box-shadow: 0 8px 6px -6px black;
     }
 }
-
-
 .sidenav a {
     color: var(--font2_color);
 }
@@ -144,7 +140,7 @@ navbar{
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+
   }
   .promo_img{
     width: 90px;

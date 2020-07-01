@@ -21,6 +21,7 @@ urlpatterns = [
     path('search_details/<int:pk>/', views.search_details.as_view(), name='search_details'),
     path('contact_form', views.contact_form, name='contact_form'),
     path('send_contact_form', views.send_contact_form, name='send_contact_form'),
+    path('send_test_mail', views.send_test_mail, name='send_test_mail'),
 
 
     path('get_airports/<str:text>', views.get_airports, name='get_airports'),

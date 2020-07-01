@@ -15,7 +15,9 @@
         {% include 'dragonfly/_partials/error_card.html' with ERROR=ERROR %}
     {% else %}
     <div class="row">
-        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+            {% include 'dragonfly/_partials/results_side_bar.html' with results=results airlines_counter=airlines_counter search_id=search_id offset=offset limit=limit results=results total_options_number=total_options_number stats=stats %}
+        </div>
         <div class="col-lg-8">
             <!--div class="row">
                 <div class="col" >
@@ -39,7 +41,7 @@
         </div>
 
         <div class="col-lg-2" style="margin:10px">
-            {% include 'dragonfly/_partials/results_side_bar.html' with results=results airlines_counter=airlines_counter search_id=search_id offset=offset limit=limit results=results total_options_number=total_options_number stats=stats %}
+
         </div>
     </div>
 
@@ -48,7 +50,11 @@
 
 
     <div class="row">
-        We are a Travel Agency {{request.COOKIES}} {{request.session}} {{request.session.name}} {{session_name}}
+        <div class="col">
+        <p>
+            <code>We are a Travel Agency {{request.COOKIES}} {{request.session}} {{request.session.name}} {{session_name}} | Cache Age: {{cache_age}}</code>
+        </p></div>
+
 
     </div>
 

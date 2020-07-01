@@ -46,14 +46,14 @@ def clear_cache():
 
 
 def store_new_search(origins, destinations, dates, adt=1, cnn=0, inf=0, options_limit=50, search=False,
-                     session_id='') -> Search:
+                     session_id='', conversation_id='none') -> Search:
     if not search:
         search = Search(origins=origins, destinations=destinations, dates=dates, adt=int(adt), cnn=int(cnn),
                         inf=int(inf))
         # search.save()
     try:
         response = send_bfm(origins=origins, destinations=destinations, dates=dates, adt=int(adt), cnn=int(cnn),
-                            inf=int(inf), options_limit=int(options_limit), session_id=session_id)
+                            inf=int(inf), options_limit=int(options_limit), session_id=session_id, conversation_id=conversation_id)
         search.save_results(results=response)
         search.save()
     except Exception as e:
@@ -82,13 +82,16 @@ def notify_email(func):
 
 @notify_email
 def search_backend(origins, destinations, dates, adt, cnn, inf, options_limit=50, request_search_id=False, cache=False,
-                   sort_criteria='total_price', session_id='') -> (Search, int):
+                   sort_criteria='total_price', session_id='', conversation_id='none') -> (Search, int):
     sep = ','
     print(f'Search backend {origins, destinations, dates, options_limit, request_search_id, cache}')
     if request_search_id:
         if DEBUG: print(f'Retrieving Existing Search: {request_search_id}')
         search = Search.objects.get(pk=request_search_id)  # queryset
         search_id = search.pk
+
+        cache_age = timezone.now() - search.updated
+        cache_age_minutes = cache_age.total_seconds() / 60
 
     elif cache:
         if DEBUG: print(f'Trying to retrieve from Cache')
@@ -98,7 +101,7 @@ def search_backend(origins, destinations, dates, adt, cnn, inf, options_limit=50
 
         if len(search) > 0:
             if DEBUG: print(f'Found in cache: {len(search)}')
-            id = len(search) - 1
+            id = len(search) - 1 # in case there is more than one returned, return the latest
 
             cache_age_minutes = 9999
             try:
@@ -112,7 +115,8 @@ def search_backend(origins, destinations, dates, adt, cnn, inf, options_limit=50
                 try:
                     search = store_new_search(origins=origins, destinations=destinations, dates=dates, adt=adt, cnn=cnn,
                                               inf=inf,
-                                              options_limit=options_limit, search=search[id], session_id=session_id)
+                                              options_limit=options_limit, search=search[id], session_id=session_id,
+                                              conversation_id=conversation_id)
                     search_id = search.pk
                 except Exception as e:
                     raise Exception(f'{e}')
@@ -125,19 +129,23 @@ def search_backend(origins, destinations, dates, adt, cnn, inf, options_limit=50
             if DEBUG: print(f'Nothing in Cache')
             try:
                 search = store_new_search(origins=origins, destinations=destinations, dates=dates, adt=adt, cnn=cnn,
-                                          inf=inf, options_limit=options_limit, session_id=session_id)
+                                          inf=inf, options_limit=options_limit, session_id=session_id, conversation_id=conversation_id)
                 search_id = search.pk
+                cache_age = timezone.now() - search.updated
+                cache_age_minutes = cache_age.total_seconds() / 60
             except Exception as e:
                 raise Exception(f'{e}')
     else:
         if DEBUG: print(f'No Search Id Provided Nor using Cache')
         try:
             search = store_new_search(origins=origins, destinations=destinations, dates=dates, adt=adt, cnn=cnn,
-                                      inf=inf, options_limit=options_limit, session_id=session_id)
+                                      inf=inf, options_limit=options_limit, session_id=session_id, conversation_id=conversation_id)
             search_id = search.pk
+            cache_age = timezone.now() - search.updated
+            cache_age_minutes = cache_age.total_seconds() / 60
         except Exception as e:
             raise Exception(f'{e}')
-
+    search.cache_age = cache_age_minutes
     return search, search_id
 
 
@@ -155,6 +163,7 @@ def search(request):
     else:
         request.session["conversation_id"] = get_random_id()
 
+    conversation_id = request.session["conversation_id"]
     try:
 
         session = (request.session)
@@ -186,7 +195,7 @@ def search(request):
 
         search, search_id = search_backend(origins, destinations, dates, adt, cnn, inf, options_limit,
                                            request_search_id,
-                                           cache, sort_criteria=sort_criteria, session_id=session_id)
+                                           cache, sort_criteria=sort_criteria, session_id=session_id, conversation_id=conversation_id)
         itineraries = search.pull(sort_criteria=sort_criteria)
         total_options_number = len(itineraries.keys())
 
@@ -235,6 +244,7 @@ def search(request):
                                    'total_options_number': total_options_number,
                                    'airlines_counter': airlines_counter,
                                    'stats': stats, 'selected_itins': {},  # selected_itins
+                                   'cache_age': search.cache_age,
 
                                    })
 
@@ -352,6 +362,14 @@ def test(request):
 def contact_form(request):
     return render(request, 'dragonfly/contact_form.html', )
 
+def send_test_mail(request):
+
+
+    email_body = f'I feel good'
+    Handyman.send_email(email_to='sgvolpe1@gmail.com', email_from='sgvolpe1@gmail.com', email_body=email_body,
+                        email_subject='I feel good', attachments=[])
+
+    return HttpResponse('ok')
 
 def send_contact_form(request):
     name = request.GET.get('name', False)
@@ -600,6 +618,7 @@ def simulate_customer(request):
     airports = ['MVD', 'BUE', 'SCL', 'MIA', 'NYC', 'SYD', 'MAD', 'MEX', 'LON', 'MXP', 'SIN']
 
     for sta, ret in Handyman.generate_date_pairs():
+        conversation_id = get_random_id()
         ori = np.random.choice(airports)
         des = np.random.choice(airports)
         time.sleep(5)
@@ -613,7 +632,7 @@ def simulate_customer(request):
             if DEBUG: print('SEARCHING *')
             search, id = search_backend(origins=ori, destinations=des, dates=f'{sta},{ret}', cache=True, adt=adt,
                                         cnn=cnn,
-                                        inf=inf, session_id=session_id)
+                                        inf=inf, session_id=session_id, conversation_id=conversation_id)
 
             itineraries = search.pull()
 

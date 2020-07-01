@@ -4,7 +4,7 @@ import datetime
 from django.contrib.auth.models import User
 from django.db import models
 from django.forms.models import model_to_dict
-
+from django.utils import timezone
 
 DEBUG = True
 class UserProfile(models.Model):
@@ -51,8 +51,8 @@ class Search(models.Model):
             self.quickest_time = min([itin.travel_time for itin in itineraries])
 
             if self.created is None:
-                self.created = datetime.datetime.now()
-            self.updated = datetime.datetime.now()
+                self.created = timezone.now()
+            self.updated = timezone.now()
 
             self.save()
         except Exception as e:
