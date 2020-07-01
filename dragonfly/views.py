@@ -1,10 +1,10 @@
 __author__ = 'SGV'
 
-import datetime, functools, json, random, time
+import datetime, functools, json, os, random, time
 from collections import Counter
 from collections import defaultdict
 from .models import Itinerary, Passenger, Reservation, Search
-from .Handyman import function_log
+from .Handyman import function_log, get_random_id, session_log
 from .forms import UserForm
 from . import Handyman
 from .Api import parse_response, get_token, send_bfm, book
@@ -23,6 +23,8 @@ from django.urls import reverse
 from django.views.decorators.gzip import gzip_page
 
 DEBUG = True
+
+
 def error(request):
     return HttpResponse('Error')
 
@@ -43,7 +45,8 @@ def clear_cache():
     # #search_from_cache = []
 
 
-def store_new_search(origins, destinations, dates, adt=1, cnn=0, inf=0, options_limit=50, search=False, session_id='') -> Search:
+def store_new_search(origins, destinations, dates, adt=1, cnn=0, inf=0, options_limit=50, search=False,
+                     session_id='') -> Search:
     if not search:
         search = Search(origins=origins, destinations=destinations, dates=dates, adt=int(adt), cnn=int(cnn),
                         inf=int(inf))
@@ -59,7 +62,6 @@ def store_new_search(origins, destinations, dates, adt=1, cnn=0, inf=0, options_
 
 
 def notify_email(func):
-
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         value = func(*args, **kwargs)
@@ -70,10 +72,13 @@ def notify_email(func):
             kwargs_repr = []  # [f"{k}={v!r}" for k, v in kwargs.items()]  # 2
             signature = "|".join(args_repr + kwargs_repr)  # 3
 
-        Handyman.send_email(email_to='sgvolpe1@gmail.com', email_from='', email_body=f"{datetime.datetime.now()},{func.__name__!r},{str(value)[:50]}, {signature}",
-                        email_subject=f'SEARCH_RECEIVED: {signature}', attachments=[])
+        Handyman.send_email(email_to='sgvolpe1@gmail.com', email_from='',
+                            email_body=f"{datetime.datetime.now()},{func.__name__!r},{str(value)[:50]}, {signature}",
+                            email_subject=f'SEARCH_RECEIVED: {signature}', attachments=[])
         return value
+
     return wrapper
+
 
 @notify_email
 def search_backend(origins, destinations, dates, adt, cnn, inf, options_limit=50, request_search_id=False, cache=False,
@@ -120,7 +125,7 @@ def search_backend(origins, destinations, dates, adt, cnn, inf, options_limit=50
             if DEBUG: print(f'Nothing in Cache')
             try:
                 search = store_new_search(origins=origins, destinations=destinations, dates=dates, adt=adt, cnn=cnn,
-                                          inf=inf,options_limit=options_limit, session_id=session_id)
+                                          inf=inf, options_limit=options_limit, session_id=session_id)
                 search_id = search.pk
             except Exception as e:
                 raise Exception(f'{e}')
@@ -136,17 +141,22 @@ def search_backend(origins, destinations, dates, adt, cnn, inf, options_limit=50
     return search, search_id
 
 
-
 # @gzip_page()
 @notify_email
 @function_log
+@session_log
 def search(request):
     if DEBUG:
-        print ('*-*********searching')
-        print (request.GET)
+        print('*-*********searching')
+        print(request.GET)
 
+    if request.session.get('conversation_id', False):
+        pass
+    else:
+        request.session["conversation_id"] = get_random_id()
 
     try:
+
         session = (request.session)
         session_id = request.session._session_key
 
@@ -210,8 +220,8 @@ def search(request):
         itineraries = filter_itineraries(itineraries, main_carrier=main_carrier)
 
         times = [it['travel_time'] for k, it in itineraries.items()]
-
         selected_itins = {'quickest_itin': get_quickest(itineraries), 'cheapest_itin': get_cheapest(itineraries)}
+
         airlines_counter = dict(Counter([itin['main_carrier'] for itin_id, itin in itineraries.items()]))
 
         # itineraries = {k: v for k, v in itineraries.items() if offset <= int(k) < offset + limit}
@@ -219,19 +229,23 @@ def search(request):
 
         stats = get_itin_statistics(itinerary_origin=origins, itinerary_destination=destinations)
 
-        return render(request, 'dragonfly/results.html',
-                      context={'ori': origins, 'des': destinations, 'dates': dates, 'results': itineraries,
-                               'search_id': search_id, 'limit': limit, 'offset': offset,
-                               'total_options_number': total_options_number,
-                               'airlines_counter': airlines_counter,
-                               'stats': stats, 'selected_itins': {}  # selected_itins
-                               })
+        response = render(request, 'dragonfly/results.html',
+                          context={'ori': origins, 'des': destinations, 'dates': dates, 'results': itineraries,
+                                   'search_id': search_id, 'limit': limit, 'offset': offset,
+                                   'total_options_number': total_options_number,
+                                   'airlines_counter': airlines_counter,
+                                   'stats': stats, 'selected_itins': {},  # selected_itins
+
+                                   })
+
+        return response
     except Exception as e:
         return render(request, 'dragonfly/results.html', context={'ERROR': e})
 
 
 def return_something(request):
     return 'Something'
+
 
 @function_log
 def results(request):
@@ -240,7 +254,8 @@ def results(request):
 
 def analytics(): pass
 
-#NO: @function_log
+
+# NO: @function_log
 class search_details(DetailView):
     model = Search
     select_related = ('pk', 'origins', 'destinations')
@@ -268,13 +283,13 @@ def populate_cache(request):
                     cnn = np.random.choice([0, 1, 2], p=[.8, .1, .1])
                     inf = np.random.choice([0, 1, 2], p=[.8, .1, .1])
                     search_backend(origins=ori, destinations=des, dates=f'{sta},{ret}', cache=True, adt=adt, cnn=cnn,
-                                   inf=inf,session_id=session_id)
+                                   inf=inf, session_id=session_id)
                 except Exception as e:
                     print(str(e))
     return HttpResponse('done')
 
 
-#@function_log
+# @function_log
 def see_itinerary(request, pk):
     itinerary = Itinerary.objects.get(pk=pk).get_json()
     return render(request, 'dragonfly/itinerary_details.html',
@@ -298,6 +313,7 @@ def get_itin_statistics(**kwargs):
 def get_top_onds(top_n=50):
     searches = Search.objects.values('origins', 'destinations').annotate(Sum('hits')).order_by()
     return searches[:top_n]
+
 
 @function_log
 def get_promotions(limit=10) -> list:
@@ -331,19 +347,21 @@ def get_shopping_stats(request):
 def test(request):
     return render(request, 'dragonfly/test.html', )
 
-#@login_required
+
+# @login_required
 def contact_form(request):
     return render(request, 'dragonfly/contact_form.html', )
+
 
 def send_contact_form(request):
     name = request.GET.get('name', False)
     email = request.GET.get('email', False)
     message = request.GET.get('message', False)
-    if DEBUG: print ('*******************SENDING EMAIL')
+    if DEBUG: print('*******************SENDING EMAIL')
 
     email_body = f'<html><body><h1>Contact form From: {name} | {email} </h1><h4>{message}</h4></body></html>'
-    Handyman.send_email(email_to = 'sgvolpe1@gmail.com',email_from=email, email_body=email_body,
-                        email_subject = f'Contact form From: {name}', attachments=[])
+    Handyman.send_email(email_to='sgvolpe1@gmail.com', email_from=email, email_body=email_body,
+                        email_subject=f'Contact form From: {name}', attachments=[])
 
     return render(request, 'dragonfly/contact_sent.html', context={})
 
@@ -362,16 +380,22 @@ def index(request):
                                                             'test': 'test', 'photos': range(10),
                                                             })
 
+
 @function_log
+@session_log
 def checkout(request, pk):
+    if DEBUG:
+        print(f'**********checkout: {pk} | conversation_id: {request.session["conversation_id"]}')
+        print(request)
+
     itinerary = Itinerary.objects.get(pk=pk).get_json()
 
-    print(f"PTC C:{itinerary['passenger_count']}")
     return render(request, 'dragonfly/checkout.html', context={'test': 'test', 'ERROR': False, 'itinerary': itinerary,
                                                                'passengers': {k: '' for k in
                                                                               range(1, itinerary['passenger_count'] + 1,
                                                                                     1)},
                                                                })
+
 
 @function_log
 def reservation_details(request, pk):
@@ -386,7 +410,9 @@ def reservation_details(request, pk):
                                                                                          enumerate(passengers)},
                                                                           })
 
+
 @function_log
+@session_log
 def create_reservation(request):
     names = request.POST.get('names', None).split(',')
     surnames = request.POST.get('surnames', None).split(',')
@@ -404,7 +430,7 @@ def create_reservation(request):
     reservation.save()
 
     passengers = []
-    if DEBUG: print (names)
+    if DEBUG: print(names)
     for i, _ in enumerate(names):
         passenger = Passenger(name=names[i], surname=surnames[i], phone=phones[i], email=emails[i])
         passenger.save()
@@ -416,13 +442,18 @@ def create_reservation(request):
 
     if DEBUG: print('*****************CREATED')
 
-    email_body = f'<html><body><h1>Reservation Created: {reservation.pk} </h1><h4></h4></body></html>'
-    Handyman.send_email(email_to={emails[0]}, email_from='sgvolpe1@gmail.com', email_body=email_body,
-                        email_subject=f'Reservation Created: {reservation.pk}', attachments=[])
     result = book(session_id=session_id)
+    print(result)
     if result == 'success':
+        print
+        email_body = f'<html><body><h1>Reservation Created: {reservation.pk} </h1><h4></h4></body></html>'
+        print(email_body)
+
+        Handyman.send_email(email_to={emails[0]}, email_from='sgvolpe1@gmail.com', email_body=email_body,
+                            email_subject=f'Reservation Created: {reservation.pk}', attachments=[])
         return redirect(reservation, context=context)
-    else: return HttpResponse('error')
+    else:
+        return HttpResponse(f'error: {result}')
 
 
 def get_airports(request, text='BUE', limit=10):
@@ -453,8 +484,13 @@ def conversion(request, output='http'):
             c[ond] = hits * 1.0 / r[ond]
         else:
             c[ond] = 9999
+    a = defaultdict(lambda: {'searches': 0, 'reservations': 0, 'conversion': 0})
+    for ond in list(s.keys()) + list(r.keys()) + list(c.keys()):
+        if ond in s: a[ond]['searches'] = s[ond]
+        if ond in r: a[ond]['reservations'] = r[ond]
+        if ond in c: a[ond]['conversion'] = c[ond]
 
-    data = [s, r, c]
+    data = {'searches': dict(s), 'reservations': dict(r), 'conversion': dict(c), 'all': dict(a)}
     if output == 'json': return data
     return JsonResponse(data, status=200, safe=False)
 
@@ -536,24 +572,32 @@ def user_login(request):
         return render(request, 'dragonfly/login.html', {})
 
 
+@login_required
 def site_statistics(request='sad'):
     search_count = Search.objects.count()
     reservation_count = Reservation.objects.count()
 
+    import pandas as pd
+    df_path = os.path.join('LOGS', 'session_log.txt')
+    df = pd.read_csv(df_path)
+    if DEBUG: print(df.columns)
+
+    conversations = json.loads(
+        df[['process_time (s)', 'conversation_id', 'datetime', 'function_name', 'result', 'session_id'
+            ]].to_json(orient='index'))
+
     return render(request, 'dragonfly/site_statistics.html', context={'search_count': search_count,
                                                                       'reservation_count': reservation_count,
                                                                       'conversion': conversion('', 'json'),
+                                                                      'conversations': conversations,
                                                                       })
 
 
 def simulate_customer(request):
-
-
     session_id = request.session._session_key
     print('### SEARCHING: ')
     import numpy as np
     airports = ['MVD', 'BUE', 'SCL', 'MIA', 'NYC', 'SYD', 'MAD', 'MEX', 'LON', 'MXP', 'SIN']
-
 
     for sta, ret in Handyman.generate_date_pairs():
         ori = np.random.choice(airports)
@@ -567,12 +611,13 @@ def simulate_customer(request):
 
             # Search
             if DEBUG: print('SEARCHING *')
-            search, id = search_backend(origins=ori, destinations=des, dates=f'{sta},{ret}', cache=True, adt=adt, cnn=cnn,
-                           inf=inf, session_id=session_id)
+            search, id = search_backend(origins=ori, destinations=des, dates=f'{sta},{ret}', cache=True, adt=adt,
+                                        cnn=cnn,
+                                        inf=inf, session_id=session_id)
 
             itineraries = search.pull()
 
-            #TODO: Conversion
+            # TODO: Conversion
             # Choose one itinerary
             if DEBUG: print('CHOOSING ITIN *')
             itinerary_id = np.random.choice(list(itineraries.keys()))
@@ -581,13 +626,13 @@ def simulate_customer(request):
 
             # Create Reservtion
             if DEBUG: print('CREATING RES*')
-            print (adt,  cnn, inf)
+            print(adt, cnn, inf)
             reservation = Reservation(itinerary_id=itinerary)
             reservation.save()
 
             pax_count = adt + cnn + inf
 
-            print (f'pax_count:{pax_count}')
+            print(f'pax_count:{pax_count}')
 
             names = ['TestName' for i in range(pax_count)]
             surnames = ['TestSurame' for i in range(pax_count)]

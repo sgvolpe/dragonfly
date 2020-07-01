@@ -12,7 +12,15 @@
                     <h6>{{itinerary.travel_time|parse_time}} {{itinerary.bags}} x <i class="fa fa-suitcase" aria-hidden="true"></i></h6>
                 </div>
                 <div class="col-3">
-                    {% if checkout == 'no' %}{% else %}<a href="{% url 'checkout' pk=itinerary.id %}"><button type="button" class="btn btn-warning" >Select</button></a>{% endif %}
+                    {% if checkout == 'no' %}{% else %}
+                    <form action="{% url 'checkout' pk=itinerary.id %}" method="get">
+                        {% csrf_token %}
+
+                        <button type="submit" class="btn btn-warning" >Select</button>
+                    </form>
+                    <!--a href="{% url 'checkout' pk=itinerary.id %}"></a-->
+
+                    {% endif %}
                 </div>
             </div>
         </div>

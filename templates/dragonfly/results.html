@@ -1,6 +1,7 @@
 {% extends 'dragonfly/base.html' %}
 {% load static %}
 
+
 {% load extra_tags %}
 
 {% block title %}
@@ -47,7 +48,8 @@
 
 
     <div class="row">
-        We are a Travel Agency
+        We are a Travel Agency {{request.COOKIES}} {{request.session}} {{request.session.name}} {{session_name}}
+
     </div>
 
 </div>

@@ -297,6 +297,6 @@ def send_bfm(origins, destinations, dates, adt, cnn=0, inf=0, options_limit=10, 
 
 
 #TODO:
-@function_log
+#@function_log
 def book(session_id='') -> str:
-    return np.random.choice(['success', 'price_jump', 'other'], p=[.6, .2, .1])
+    return np.random.choice(['success', 'price_jump', 'other'], p=[.6, .3, .1])

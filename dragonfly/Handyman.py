@@ -1,4 +1,4 @@
-import datetime, functools, json, os, requests, smtplib, time
+import datetime, functools, json, os, requests, smtplib, time, uuid
 from .models import Test
 from email import encoders
 from email.mime.base import MIMEBase
@@ -10,6 +10,11 @@ import pandas as pd
 
 from datetime import timedelta
 
+DEBUG = True
+
+
+def get_random_id():
+    return f'sgv_cid_{uuid.uuid1().hex}'
 
 def translate_iata(iata='EZE', what='airport'):
     cities = {'EZE': 'BUE', 'AEP': 'BUE'}
@@ -68,9 +73,38 @@ def timer(func):
 
     return wrapper_timer
 
+def session_log(func):
+
+    @functools.wraps(func)
+    def wrapper_timer(*args, **kwargs):
+
+        start_time = time.perf_counter()  # 1
+        value = func(*args, **kwargs)
+        end_time = time.perf_counter()  # 2
+        run_time = end_time - start_time  # 3
+        args_repr = [repr(a) for a in args]  # 1
+        kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]  # 2
+        signature = "|".join(args_repr + kwargs_repr)  # 3
+
+        if DEBUG:
+            print('****SESSION LOG')
+            print (args)
+            print (kwargs)
+            session_id = args[0].session._session_key
+
+
+            conversation_id = args[0].session['conversation_id']
+
+        log(log_f_folder='LOGS', log_f_name='session_log.txt',
+            to_write=f"{datetime.datetime.now()},{func.__name__!r},{run_time},{str(value)[:50]}, {signature}, "
+                     f"{session_id},{conversation_id}")
+        return value
+
+
+    return wrapper_timer
 
 def function_log(func):
-    """Print the runtime of the decorated function"""
+    """decorated function"""
 
     @functools.wraps(func)
     def wrapper_timer(*args, **kwargs):
