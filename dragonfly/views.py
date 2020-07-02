@@ -32,6 +32,8 @@ def error(request):
 def log_search(func):
     pass
 
+def about(request):
+    return render(request, 'dragonfly/about.html', context={})
 
 # TODO:
 def clear_cache():
@@ -353,9 +355,9 @@ def get_shopping_stats(request):
     return {'most_popular': most_popular, 'trending_7days': trending_7days}
 
 
-@login_required
+
 def test(request):
-    return render(request, 'dragonfly/test.html', )
+    return render(request, 'frontend/index.html', )
 
 
 # @login_required

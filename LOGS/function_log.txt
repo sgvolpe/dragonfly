@@ -1189,3 +1189,56 @@ tz, <WSGIRequest: GET '/search?csrfmiddlewaretoken=h0OpVU2Y0zDK70q3IhBDIKBigxskc
 2020-07-01 18:24:38.517421,'get_token',1.3284537000000007,T1RLAQLOalwomRF4n/ALClexFNb6i9D3TRD8dqzB5lH0dd9yx9, 
 2020-07-01 18:24:45.058180,'parse_response',0.07885970000000242,{0: {'legs': [{'ref': 7}, {'ref': 40}], 'currency', <Response [200]>
 2020-07-01 18:24:47.616400,'search',10.438850899999998,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=gxb2VpoZrXW7dqq2IqPR1vGD0gM1n3ONno5JJl7pW5hIgrJJZ2pax1XgGuPKxdG4&adt=1&cnn=1&inf=0&cache=on&options=rt&origins=MVD%2C&destinations=sin%2C&dates=2020-07-24%2C2020-07-30%2C'>
+2020-07-01 19:24:21.779474,'get_promotions',0.44675929999999653,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:24:22.569474,'index',1.2370025999999967,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:26:56.869894,'get_token',1.1515653999999813,T1RLAQLHE6NJ2UviWdLv2fjdLNyA37j0ChBnJlkft0URtrEc3v, 
+2020-07-01 19:26:57.579090,'get_token',0.7060376000000019,T1RLAQJ6REh56oPQJHSjJjB/vnQkkEDJ+RCDzxYUnMjJHoYg1c, 
+2020-07-01 19:26:57.899847,'parse_response',7.460000000492073e-05,No Options Found, <Response [200]>
+2020-07-01 19:26:57.921846,'search',2.214292599999993,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=egwokGh1ieGIAhM8vi1ljbt2wdBmpMIyl7q58C0rNm1jDi5PMUBEPHKFcrE5zWAP&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=london%2C&destinations=BUE%2C&dates=2020-07-01%2C2020-07-01%2C'>
+2020-07-01 19:26:58.430687,'get_token',0.7058236000000022,T1RLAQJdSGPv4TDuwp5xg2obvfcoo4O9IRB2gvwA4QzEqOZ9Pw, 
+2020-07-01 19:26:58.624689,'parse_response',7.070000000908294e-05,No Options Found, <Response [200]>
+2020-07-01 19:26:58.650688,'search',1.7883190000000013,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=egwokGh1ieGIAhM8vi1ljbt2wdBmpMIyl7q58C0rNm1jDi5PMUBEPHKFcrE5zWAP&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=london%2C&destinations=BUE%2C&dates=2020-07-01%2C2020-07-01%2C'>
+2020-07-01 19:26:59.438691,'parse_response',7.229999999935899e-05,No Options Found, <Response [200]>
+2020-07-01 19:26:59.469688,'search',1.7524446000000182,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/search?csrfmiddlewaretoken=egwokGh1ieGIAhM8vi1ljbt2wdBmpMIyl7q58C0rNm1jDi5PMUBEPHKFcrE5zWAP&adt=1&cnn=0&inf=0&cache=on&options=rt&origins=london%2C&destinations=BUE%2C&dates=2020-07-01%2C2020-07-01%2C'>
+2020-07-01 19:29:17.961669,'get_promotions',0.33342220000002953,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:29:18.635667,'get_promotions',0.6927328999999531,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:29:19.180669,'get_promotions',1.0179148000000282,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:29:19.448667,'index',1.8203237999999828,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:29:20.071669,'get_promotions',1.4806217000000288,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:29:20.522666,'get_promotions',1.558982100000037,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:29:20.734664,'index',2.7915990000000193,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:29:21.239665,'get_promotions',1.8390555999999947,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:29:21.899667,'get_promotions',2.2616568999999913,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:29:22.040667,'index',3.8785083000000213,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:29:23.323705,'index',4.7331228000000465,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:29:23.438664,'index',4.474463000000014,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:29:23.929666,'index',4.528799499999991,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:29:24.119670,'index',4.481963600000029,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:38:45.239442,'get_promotions',0.7003138000000035,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:38:46.348442,'index',1.8094186999999806,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:39:03.734416,'get_promotions',0.45910229999998364,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:39:04.926416,'index',1.6504039000000148,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:41:04.815206,'get_promotions',0.49746600000003127,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:41:05.824207,'index',1.5072949000000335,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:41:07.422208,'get_promotions',0.46639769999995906,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:41:08.587208,'index',1.6311787999999865,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:42:52.128910,'get_promotions',0.6682654999999613,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:42:53.151910,'index',1.6914021000000048,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-01 19:42:54.086908,'get_promotions',0.7244453000000135,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-01 19:42:55.240910,'index',1.878383700000029,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 08:38:02.611033,'get_promotions',0.4303264999980456,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 08:38:03.587037,'index',1.4069226999999955,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 08:42:42.786209,'get_promotions',0.44701579999673413,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 08:42:43.685209,'index',1.3456767000025138,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 13:00:59.466009,'get_promotions',0.5295286000000008,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 13:01:00.533516,'index',1.5970493000000001,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 13:01:44.714319,'get_promotions',0.5837668000000011,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 13:01:45.852675,'index',1.7223305,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 13:10:21.290155,'get_promotions',1.116685699999998,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 13:10:23.023328,'index',2.84966,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 13:33:57.125828,'get_promotions',0.7422618000000005,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 13:33:57.434825,'get_promotions',0.741278799999999,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 13:33:59.026563,'index',2.643021600000001,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 13:33:59.269325,'index',2.5759241,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>
+2020-07-02 15:39:14.749847,'get_promotions',0.4683804999999994,[<Itinerary: Itinerary object (6593)>, <Itinerary:, 
+2020-07-02 15:39:15.763691,'index',1.4829936000000004,<HttpResponse status_code=200, "text/html; charset, <WSGIRequest: GET '/'>

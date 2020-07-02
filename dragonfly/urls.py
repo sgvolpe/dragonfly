@@ -9,6 +9,10 @@ app_name = 'dragonfly'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('api/', include('dragonfly.api.urls')),
+
+
     path('', views.index, name='index'),
     path('search', views.search, name='search'),
     path('test', views.test, name='test'),
@@ -36,6 +40,9 @@ urlpatterns = [
 
 
     path('site_statistics', views.site_statistics, name='site_statistics'),
+    path('about', views.about, name='about'),
+
+    path('api-auth/', include('rest_framework.urls')),
 
 
 
